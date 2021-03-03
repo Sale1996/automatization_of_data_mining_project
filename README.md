@@ -1,0 +1,1 @@
+# automatization_of_data_mining_project

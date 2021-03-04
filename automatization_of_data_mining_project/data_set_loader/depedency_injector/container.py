@@ -4,4 +4,4 @@ from data_set_loader.classes.implementations.pandas_data_set_loader import Panda
 
 
 class Container(containers.DeclarativeContainer):
-    data_set_loader = providers.Factory(PandasDataSetLoader)
+    DataSetLoader = providers.Factory(PandasDataSetLoader)

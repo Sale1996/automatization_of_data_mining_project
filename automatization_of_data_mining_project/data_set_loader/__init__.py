@@ -1,6 +1,4 @@
-from dependency_injector import providers
-
 from data_set_loader.classes.data_set_loader import DataSetLoader
-from data_set_loader.classes.implementations.pandas_data_set_loader import PandasDataSetLoader
+from data_set_loader.depedency_injector.container import Container
 
-Loader: DataSetLoader = providers.Factory(PandasDataSetLoader)
+Loader: DataSetLoader = Container.DataSetLoader

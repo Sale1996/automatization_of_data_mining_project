@@ -1,6 +1,7 @@
 import unittest
 
 from data_sets_reporter.classes.data_set_reporter import DataSetReporter
+from data_sets_reporter.depedency_injector.container import Container
 from data_sets_reporter.exceptions.register_exeptions import WrongInputFormatError, NonIterableObjectError
 
 
@@ -10,7 +11,7 @@ class DataSetsListingTestBase(unittest.TestCase):
 
 class DataSetsListingTestErrorCases(DataSetsListingTestBase):
     def setUp(self):
-        self.data_set_register = DataSetReporter()
+        self.data_set_register = Container.DataSetReporter()
 
     def test_given_None_when_listing_data_sets_then_throw_input_format_exception(self):
         with self.assertRaises(WrongInputFormatError):
@@ -51,7 +52,7 @@ class DataSetsListingTestErrorCases(DataSetsListingTestBase):
 
 class DataSetsListingOnDummyDataSetLists(DataSetsListingTestBase):
     def setUp(self):
-        self.data_set_register = DataSetReporter()
+        self.data_set_register = Container.DataSetReporter()
 
     def test_given_empty_data_sets_list_when_listing_data_sets_then_return_string_listing_for_empty_case(self):
         expected_string_report = "THERE IS NO DATA SET TO LIST\n\n\n"

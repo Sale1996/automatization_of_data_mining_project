@@ -1,4 +1,4 @@
-from data_set_loader.classes.pandas_data_set_loader.pandas_reader.pandas_reader import PandasReader
+from data_set_loader.classes.pandas_data_set_loader.loader.pandas_reader.pandas_reader import PandasReader
 import pandas as pd
 
 

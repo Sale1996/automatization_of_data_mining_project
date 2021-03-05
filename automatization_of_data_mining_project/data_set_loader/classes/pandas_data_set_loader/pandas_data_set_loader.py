@@ -1,34 +1,28 @@
-import pandas as pd
-
 from data_set_loader.classes.data_set_loader import DataSetLoader
-from data_set_loader.exceptions.loader_exceptions import WrongPathNameFormatError, FileIsNotFoundError, \
+from data_set_loader.classes.pandas_data_set_loader.pandas_reader.pandas_reader import PandasReader
+from data_set_loader.classes.pandas_data_set_loader.pathname_checker.pathname_checker import PathNameChecker
+from data_set_loader.exceptions.loader_exceptions import FileIsNotFoundError, \
     MissingImportantColumnsError
 
 
 class PandasDataSetLoader(DataSetLoader):
 
+    def __init__(self, column_names, pandas_reader: PandasReader, pathname_checker: PathNameChecker):
+        super().__init__(column_names)
+        self.pandas_reader = pandas_reader
+        self.pathname_checker = pathname_checker
+
     def load_data_set_and_column_names(self, pathname):
-        self.__check_pathname(pathname)
+        self.pathname_checker.check(pathname)
         loaded_data = self.__load_data(pathname)
         self.__check_are_required_columns_inside(loaded_data, self.must_contained_columns)
         return self.__extract_data_set_and_column_names(loaded_data, self.must_contained_columns)
 
-    def __check_pathname(self, pathname):
-        if pathname is None:
-            raise WrongPathNameFormatError
-
     def __load_data(self, pathname):
         try:
-            loaded_data = self.__pandas_read(pathname)
+            loaded_data = self.pandas_reader.read(pathname)
         except FileNotFoundError:
             raise FileIsNotFoundError
-        return loaded_data
-
-    def __pandas_read(self, pathname):
-        if pathname.endswith(".xlsx"):
-            loaded_data = pd.read_excel(pathname)
-        else:
-            loaded_data = pd.read_csv(pathname, encoding='ISO-8859-1', error_bad_lines=False)
         return loaded_data
 
     def __check_are_required_columns_inside(self, loaded_data, must_contained_columns):

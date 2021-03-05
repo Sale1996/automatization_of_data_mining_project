@@ -1,4 +1,4 @@
 from data_sets_reporter.classes.data_set_reporter import DataSetReporter
 from data_sets_reporter.depedency_injector.container import Container
 
-Reporter: DataSetReporter = Container.DataSetReporter
+Reporter: DataSetReporter = Container.data_set_reporter

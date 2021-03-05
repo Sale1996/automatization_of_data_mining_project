@@ -1,20 +1,9 @@
-from data_sets_reporter.classes.data_set_reporter import DataSetReporter
+from data_sets_reporter.classes.data_set_string_reporter.data_set_validator.data_set_report_validator import DataSetValidator
 from data_sets_reporter.exceptions.register_exeptions import WrongInputFormatError, NonIterableObjectError
 
 
-class DefaultDataSetReporter(DataSetReporter):
-    def get_report_listing_of_data_sets(self, data_sets):
-        self.__check_validation_of_data_sets(data_sets)
-
-        if data_sets.__len__() == 0:
-            return self.get_report_string_for_empty_data_set_list()
-
-        return self.__generate_report(data_sets)
-
-    def get_report_string_for_empty_data_set_list(self):
-        return self.report_generator.get_report_string_for_empty_data_set_list()
-
-    def __check_validation_of_data_sets(self, data_sets):
+class TupleWithStringsDataSetValidator(DataSetValidator):
+    def validate(self, data_sets):
         self.__check_is_none(data_sets)
         self.__check_is_not_an_array(data_sets)
         self.__check_elements_of_array(data_sets)
@@ -51,14 +40,3 @@ class DefaultDataSetReporter(DataSetReporter):
             for column_name in element[1]:
                 if not isinstance(column_name, str):
                     raise WrongInputFormatError
-
-    def __generate_report(self, data_sets):
-        report = ""
-
-        for data_set in data_sets:
-            report += self.report_generator.generate_data_set_title(data_set[0])
-            report += self.report_generator.generate_columns_string_report(data_set[1])
-
-        return report
-
-

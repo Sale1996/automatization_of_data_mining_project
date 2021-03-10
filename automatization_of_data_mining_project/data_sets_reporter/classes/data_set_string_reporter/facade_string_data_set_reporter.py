@@ -1,6 +1,6 @@
 from data_sets_reporter.classes.data_set_string_reporter.data_set_validator.data_set_report_validator import DataSetValidator
-from data_sets_reporter.classes.data_set_string_reporter.report_generator.data_set_reporter import DataSetReporter
-from data_sets_reporter.classes.report_generator import ReportGenerator
+from data_sets_reporter.classes.data_set_reporter import DataSetReporter
+from data_sets_reporter.classes.data_set_string_reporter.report_generator.report_generator import ReportGenerator
 
 
 class FacadeStringDataSetReporter(DataSetReporter):

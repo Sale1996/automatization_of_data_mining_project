@@ -1,4 +1,4 @@
-from data_sets_reporter.classes.report_generator import ReportGenerator
+from data_sets_reporter.classes.data_set_string_reporter.report_generator.report_generator import ReportGenerator
 
 
 class StringReportGenerator(ReportGenerator):

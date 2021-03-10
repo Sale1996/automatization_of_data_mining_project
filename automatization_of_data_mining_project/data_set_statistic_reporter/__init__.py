@@ -1,0 +1,4 @@
+from data_set_statistic_reporter.depedency_injector.container import Container
+from data_set_statistic_reporter.classes.statistic_reporter import StatisticReporter
+
+StatisticReporter: StatisticReporter = Container.statistics_reporter

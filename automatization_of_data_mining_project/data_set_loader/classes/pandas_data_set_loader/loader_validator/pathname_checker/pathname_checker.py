@@ -1,4 +1,4 @@
 class PathNameChecker(object):
 
-    def check(self, pathname):
+    def check(self, pathname: str):
         pass

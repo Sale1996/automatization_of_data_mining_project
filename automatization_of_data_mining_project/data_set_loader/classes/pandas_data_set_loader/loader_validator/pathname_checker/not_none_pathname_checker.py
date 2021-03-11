@@ -4,6 +4,6 @@ from data_set_loader.exceptions.loader_exceptions import WrongPathNameFormatErro
 
 class NotNonePathNameChecker(PathNameChecker):
 
-    def check(self, pathname):
+    def check(self, pathname: str):
         if pathname is None:
             raise WrongPathNameFormatError

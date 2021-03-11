@@ -1,3 +1,7 @@
+from typing import List, Tuple
+
+import pandas
+
 from data_set_loader.classes.pandas_data_set_loader.loader_validator.loader_validator import LoaderValidator
 from data_set_loader.classes.pandas_data_set_loader.loader_validator.pathname_checker.pathname_checker import \
     PathNameChecker
@@ -9,10 +13,13 @@ class ImportantColumnsValidator(LoaderValidator):
     def __init__(self, pathname_checker: PathNameChecker):
         self.pathname_checker = pathname_checker
 
-    def validate_pathname(self, pathname):
+    def validate_pathname(self, pathname: str):
         self.pathname_checker.check(pathname)
 
-    def validate_loaded_data(self, loaded_data, must_contained_columns, pairs_of_must_contained_columns):
+    def validate_loaded_data(self, loaded_data: pandas.DataFrame,
+                             must_contained_columns: List[str],
+                             pairs_of_must_contained_columns: List[Tuple[str, str]]):
+
         self.__check_are_required_columns_inside(loaded_data, must_contained_columns, pairs_of_must_contained_columns)
 
     def __check_are_required_columns_inside(self, loaded_data, must_contained_columns, pairs_of_must_contained_columns):

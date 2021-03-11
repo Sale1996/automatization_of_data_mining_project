@@ -1,4 +1,5 @@
 import pandas
+from pandas import DataFrame
 
 from data_set_loader.classes.pandas_data_set_loader.loader.data_loader import DataLoader
 from data_set_loader.classes.pandas_data_set_loader.processor.converter.column_pair_converter import ColumnPairConverter
@@ -10,7 +11,9 @@ class DocumentColumnPairConverter(ColumnPairConverter):
         self.loader = loader
 
     def convert_values_of_changeable_column_to_match_important_column(
-            self, loaded_data, pair_important_column, pair_changeable_column):
+            self, loaded_data: pandas.DataFrame,
+            pair_important_column: str,
+            pair_changeable_column: str) -> pandas.DataFrame:
 
         converter_data_set = self.load_converter_data_set(pair_important_column, pair_changeable_column)
         changeable_column_to_important_column_map = self.get_changeable_column_to_important_column_map(

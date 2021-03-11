@@ -1,3 +1,7 @@
+from typing import List
+
+import pandas
+
 from data_set_loader.classes.pandas_data_set_loader.loader.data_loader import DataLoader
 from data_set_loader.classes.pandas_data_set_loader.loader.pandas_reader.pandas_reader import PandasReader
 from data_set_loader.exceptions.loader_exceptions import FileIsNotFoundError
@@ -7,14 +11,15 @@ class DataFrameWithColumnsArrayLoader(DataLoader):
     def __init__(self, pandas_reader: PandasReader):
         self.pandas_reader = pandas_reader
 
-    def load_data(self, pathname):
+    def load_data(self, pathname) -> pandas.DataFrame:
         try:
             loaded_data = self.pandas_reader.read(pathname)
         except FileNotFoundError:
             raise FileIsNotFoundError
         return loaded_data
 
-    def extract_data(self, loaded_data, must_contained_columns):
+    def extract_data(self, loaded_data: pandas.DataFrame, must_contained_columns: List[str])\
+            -> (pandas.DataFrame, List[str], List[str]):
         return self.__extract_data_set_and_column_names(loaded_data, must_contained_columns)
 
     def __extract_data_set_and_column_names(self, loaded_data, must_contained_columns):

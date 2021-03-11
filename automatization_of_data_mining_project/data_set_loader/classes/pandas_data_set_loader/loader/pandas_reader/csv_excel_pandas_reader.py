@@ -4,7 +4,7 @@ import pandas as pd
 
 class CsvExcelPandasReader(PandasReader):
 
-    def read(self, pathname):
+    def read(self, pathname: str) -> pd.DataFrame:
         if pathname.endswith(".xlsx"):
             loaded_data = pd.read_excel(pathname)
         else:

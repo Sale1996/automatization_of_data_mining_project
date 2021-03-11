@@ -14,8 +14,7 @@ class DataSetLoaderTestErrorCases(DataSetLoaderTestBase):
     def setUp(self):
         must_contained_columns = ['Year']
         pairs_of_must_contained_columns = [('Country Code', 'Country Name')]
-        self.data_set_loader: DataSetLoader = Container.data_set_loader(must_contained_columns,
-                                                                        pairs_of_must_contained_columns)
+        self.data_set_loader: DataSetLoader = Container.data_set_loader(must_contained_columns, pairs_of_must_contained_columns)
 
     def test_given_None_when_load_data_set_then_return_minus_1_array(self):
         with self.assertRaises(WrongPathNameFormatError):
@@ -42,10 +41,9 @@ class DataSetLoaderTestDummyDataSets(DataSetLoaderTestBase):
     def setUp(self):
         must_contained_columns = ['Year']
         pairs_of_must_contained_columns = [('Country Code', 'Country Name')]
+        self.data_set_loader: DataSetLoader = Container.data_set_loader(must_contained_columns, pairs_of_must_contained_columns)
         self.expected_arbitrary_column_names = ['Year', 'Country Code']
         self.expected_other_column_names = ['Test']
-        self.data_set_loader: DataSetLoader = Container.data_set_loader(must_contained_columns,
-                                                                        pairs_of_must_contained_columns)
 
     def test_given_correct_pathname_of_excel_data_set_when_load_data_set_then_return_data_set_and_column_names(self):
         expected_data_set = [[1, 1, 1], [1, 1, 1]]

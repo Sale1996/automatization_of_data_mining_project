@@ -1,10 +1,11 @@
 import math
+from typing import List
 
 from data_set_statistic_reporter.classes.statistic_generator.statistic_generator import StatisticGenerator
 
 
 class VarianceStatisticGenerator(StatisticGenerator):
-    def generate_statistic(self, data_set):
+    def generate_statistic(self, data_set) -> (List[str], List[str]):
         statistic_column_names = []
         statistic_column_values = []
 

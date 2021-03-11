@@ -6,7 +6,7 @@ from data_set_statistic_reporter.classes.statistic_reporter_data_set.statistic_r
 
 
 class DataSetStatisticReporterImpl(StatisticReporterDataSet):
-    def get_statistics_as_data_set(self, statistic_objects: List[StatisticReporterDataClass]):
+    def get_statistics_as_data_set(self, statistic_objects: List[StatisticReporterDataClass]) -> List[List[str]]:
         data_sets_statistic = []
 
         for element in statistic_objects:

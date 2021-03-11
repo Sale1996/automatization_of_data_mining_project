@@ -1,3 +1,6 @@
+from typing import List
+
+
 class StatisticGenerator(object):
     def __init__(self, column_names):
         self.column_names = column_names
@@ -7,5 +10,5 @@ class StatisticGenerator(object):
             1. Statistic column names
             2. Statistic column values for each column name
     '''
-    def generate_statistic(self, data_set) -> ([], []):
+    def generate_statistic(self, data_set) -> (List[str], List[str]):
         pass

@@ -12,7 +12,6 @@ from data_set_statistic_reporter.classes.statistic_generator.implementations.var
     VarianceStatisticGenerator
 from data_set_statistic_reporter.classes.data_class.statistic_reporter_data_class import StatisticReporterDataClass
 from data_set_statistic_reporter.depedency_injector.container import Container
-from data_set_statistic_reporter.exceptions.reporter_exceptions import WrongInputFormatError, NonIterableObjectError
 
 import pandas as pd
 

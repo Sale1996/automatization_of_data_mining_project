@@ -1,5 +1,6 @@
 import unittest
 
+from data_sets_reporter.classes.data_class.data_set_info_for_reporter import DataSetInfoForReporter
 from data_sets_reporter.depedency_injector.container import Container
 from data_sets_reporter.exceptions.register_exeptions import WrongInputFormatError, NonIterableObjectError
 
@@ -63,8 +64,9 @@ class DataSetsListingOnDummyDataSetLists(DataSetsListingTestBase):
     def test_given_array_with_one_data_set_when_listing_data_sets_then_return_string_listing_for_one_data_set(self):
         expected_string_report = "\nDummy data set name\n\nColumns:\n\nTest || Test2 || Test3\n\n\n==========\n"
 
-        string_report = self.data_set_reporter.get_report_listing_of_data_sets(
-            [("Dummy data set name", ["Test", "Test2", "Test3"])])
+        data_set_info = DataSetInfoForReporter("Dummy data set name", ["Test", "Test2", "Test3"])
+
+        string_report = self.data_set_reporter.get_report_listing_of_data_sets([data_set_info])
 
         self.assertEqual(expected_string_report, string_report)
 
@@ -73,8 +75,10 @@ class DataSetsListingOnDummyDataSetLists(DataSetsListingTestBase):
         expected_string_report = "\nDummy data set name\n\nColumns:\n\nTest || Test2 || Test3\n\n\n==========\n"
         expected_string_report += "\nDummy data set 2 name\n\nColumns:\n\nTest3 || Test4 || Test5\n\n\n==========\n"
 
+        data_set_info1 = DataSetInfoForReporter("Dummy data set name", ["Test", "Test2", "Test3"])
+        data_set_info2 = DataSetInfoForReporter("Dummy data set 2 name", ["Test3", "Test4", "Test5"])
+
         string_report = self.data_set_reporter.get_report_listing_of_data_sets(
-            [("Dummy data set name", ["Test", "Test2", "Test3"]),
-             ("Dummy data set 2 name", ["Test3", "Test4", "Test5"])])
+            [data_set_info1, data_set_info2])
 
         self.assertEqual(expected_string_report, string_report)

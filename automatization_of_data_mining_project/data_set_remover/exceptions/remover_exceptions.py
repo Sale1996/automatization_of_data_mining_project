@@ -19,5 +19,21 @@ class ColumnArraysShouldNotBeBothEmpty(Error):
     pass
 
 
-class ColumnArraysCannotBeBothFilled(Error):
+class ColumnArraysShouldNotBeBothFilled(Error):
+    pass
+
+
+class WrongCriteriaNameError(Error):
+    pass
+
+
+class MissingColumnToIncludeError(Error):
+    pass
+
+
+class MissingPercentCriteriaValueMustBeBetween1and99(Error):
+    pass
+
+
+class UniqueImpressionCriteriaValueMustBeGreaterThan1(Error):
     pass

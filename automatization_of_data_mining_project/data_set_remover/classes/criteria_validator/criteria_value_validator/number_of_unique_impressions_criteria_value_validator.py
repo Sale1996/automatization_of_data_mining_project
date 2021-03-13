@@ -4,10 +4,6 @@ from data_set_remover.exceptions.remover_exceptions import UniqueImpressionCrite
 
 
 class NumberOfUniqueImpressionsCriteriaValueValidator(CriteriaValueValidator):
-    def __init__(self):
-        super().__init__()
-        self.criteria_name = "NUMBER_OF_UNIQUE_IMPRESSIONS_CRITERIA"
-
     def is_valid(self, value: int):
         if value < 1:
             raise UniqueImpressionCriteriaValueMustBeGreaterThan1

@@ -10,3 +10,6 @@ class DataSetRemover(object):
 
     def remove_by_criteria(self, criteria_remover_data: DataForCriteriaRemove):
         pass
+
+    def get_criteria_validator_names(self):
+        pass

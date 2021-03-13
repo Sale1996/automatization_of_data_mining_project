@@ -277,3 +277,13 @@ class DataSetRemoverByCriteriaDummyCasesTest(DataSetsRemoverTestBase):
                                      required_columns, other_columns)
 
         return data_set_info1, data_set_info2
+
+
+class DataSetRemoverGetInformationTest(DataSetsRemoverTestBase):
+    def test_given_criteria_validators_for_missing_percent_and_number_of_unique_impressions_when_get_criteria_validators_names_then_give_correct_list_of_names(
+            self):
+        data_set_remover = Container.data_set_remover()
+
+        criteria_names = data_set_remover.get_criteria_validator_names()
+
+        self.assertEqual(["MISSING_DATA_PERCENT_CRITERIA", "NUMBER_OF_UNIQUE_IMPRESSIONS_CRITERIA"], criteria_names)

@@ -12,14 +12,14 @@ class DataSetStatisticReporterImpl(StatisticReporterDataSet):
         for element in statistic_objects:
             data_sets_statistic.append([element.data_set_name])
 
-            statistic_column_names, statistic_column_values = self.generate_statistic_column_name_and_value(element)
+            statistic_column_names, statistic_column_values = self.__generate_statistic_column_name_and_value(element)
 
             data_sets_statistic.append(statistic_column_names)
             data_sets_statistic.append(statistic_column_values)
 
         return data_sets_statistic
 
-    def generate_statistic_column_name_and_value(self, element):
+    def __generate_statistic_column_name_and_value(self, element):
         statistic_column_names = []
         statistic_column_values = []
 

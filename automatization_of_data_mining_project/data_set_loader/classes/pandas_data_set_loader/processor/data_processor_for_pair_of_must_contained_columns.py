@@ -28,14 +28,14 @@ class DataProcessorForPairOfMustContainedColumns(DataProcessor):
             pair_important_column = pair_of_must_contained_columns[0]
             pair_changeable_column = pair_of_must_contained_columns[1]
 
-            updated_must_contained_columns = self.add_important_column_to_must_contained_columns_array(
+            updated_must_contained_columns = self.__add_important_column_to_must_contained_columns_array(
                 updated_must_contained_columns, pair_important_column)
 
-            if not self.is_contained_in_data(updated_data_set, pair_changeable_column):
+            if not self.__is_contained_in_data(updated_data_set, pair_changeable_column):
                 continue
 
-            if self.is_contained_in_data(updated_data_set, pair_important_column):
-                updated_data_set = self.remove_changeable_column_from_data_set(updated_data_set, pair_changeable_column)
+            if self.__is_contained_in_data(updated_data_set, pair_important_column):
+                updated_data_set = self.__remove_changeable_column_from_data_set(updated_data_set, pair_changeable_column)
                 continue
 
             updated_data_set = self.column_pair_converter.convert_values_of_changeable_column_to_match_important_column \
@@ -43,16 +43,16 @@ class DataProcessorForPairOfMustContainedColumns(DataProcessor):
 
         return updated_data_set, updated_must_contained_columns
 
-    def add_important_column_to_must_contained_columns_array(self, must_contained_columns, additional_important_column):
+    def __add_important_column_to_must_contained_columns_array(self, must_contained_columns, additional_important_column):
         updated_must_contained_columns = must_contained_columns[:]
         updated_must_contained_columns.append(additional_important_column)
 
         return updated_must_contained_columns
 
-    def is_contained_in_data(self, loaded_data, column_name):
+    def __is_contained_in_data(self, loaded_data, column_name):
         return column_name in loaded_data.columns.tolist()
 
-    def remove_changeable_column_from_data_set(self, loaded_data, pair_changeable_column):
+    def __remove_changeable_column_from_data_set(self, loaded_data, pair_changeable_column):
         columns_without_changeable_column = loaded_data.columns.tolist()[:]
         columns_without_changeable_column.remove(pair_changeable_column)
         data_set_without_changeable_column = loaded_data[columns_without_changeable_column]

@@ -10,19 +10,19 @@ class VarianceStatisticGenerator(StatisticGenerator):
         statistic_column_values = []
 
         for column_name in self.column_names:
-            statistic_column_names.extend(self.get_column_names(column_name))
-            statistic_column_values.extend(self.get_column_values(column_name, data_set))
+            statistic_column_names.extend(self.__get_column_names(column_name))
+            statistic_column_values.extend(self.__get_column_values(column_name, data_set))
 
         return statistic_column_names, statistic_column_values
 
-    def get_column_names(self, column_name):
+    def __get_column_names(self, column_name):
         column_names = []
         column_names.append(column_name + " - Mean value")
         column_names.append(column_name + " - Standard deviation")
         column_names.append(column_name + " - Variance")
         return column_names
 
-    def get_column_values(self, column_name, data_set):
+    def __get_column_values(self, column_name, data_set):
         column_values = []
 
         mean, standard_deviation, variance = self.get_variance_data(column_name, data_set)

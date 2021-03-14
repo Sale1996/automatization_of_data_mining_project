@@ -1,6 +1,0 @@
-Data set name
-Columns,Year - Range,Year - Mean value,Year - Standard deviation,Year - Variance,Country Code - Unique impressions,corruption_index - Total number of data,corruption_index - Total number of missing data,corruption_index - Total percent of missing data
-"Country Code, Year, corruption_index",2000-2017,2008,5,26.92,161,2898,352,12.15
-Data set name2
-Columns,Year - Range,Year - Mean value,Year - Standard deviation,Year - Variance,Country Code - Unique impressions,usage - Total number of data,usage - Total number of missing data,usage - Total percent of missing data
-"Country Code, Year, usage",1960-2019,1990,17,299.92,255,15300,0,0.0

@@ -62,7 +62,7 @@ class DataSetsListingOnDummyDataSetLists(DataSetsListingTestBase):
         self.assertEqual(expected_string_report, string_report)
 
     def test_given_array_with_one_data_set_when_listing_data_sets_then_return_string_listing_for_one_data_set(self):
-        expected_string_report = "\nDummy data set name\n\nColumns:\n\nTest || Test2 || Test3\n\n\n==========\n"
+        expected_string_report = "Data set name: Dummy data set name\nColumns: Test || Test2 || Test3\n\n==========\n\n"
 
         data_set_info = DataSetInfoForReporter("Dummy data set name", ["Test", "Test2", "Test3"])
 
@@ -72,8 +72,8 @@ class DataSetsListingOnDummyDataSetLists(DataSetsListingTestBase):
 
     def test_given_array_with_multiple_data_sets_when_listing_data_sets_then_return_correct_string_report(
             self):
-        expected_string_report = "\nDummy data set name\n\nColumns:\n\nTest || Test2 || Test3\n\n\n==========\n"
-        expected_string_report += "\nDummy data set 2 name\n\nColumns:\n\nTest3 || Test4 || Test5\n\n\n==========\n"
+        expected_string_report = "Data set name: Dummy data set name\nColumns: Test || Test2 || Test3\n\n==========\n\n"
+        expected_string_report += "Data set name: Dummy data set 2 name\nColumns: Test3 || Test4 || Test5\n\n==========\n\n"
 
         data_set_info1 = DataSetInfoForReporter("Dummy data set name", ["Test", "Test2", "Test3"])
         data_set_info2 = DataSetInfoForReporter("Dummy data set 2 name", ["Test3", "Test4", "Test5"])

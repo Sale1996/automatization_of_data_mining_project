@@ -16,6 +16,8 @@ from data_set_statistic_reporter.classes.statistic_generator.implementations.uni
 from data_set_statistic_reporter.classes.statistic_generator.implementations.variance_statistic_generator import \
     VarianceStatisticGenerator
 from data_set_statistic_reporter.classes.statistic_generator.statistic_generator import StatisticGenerator
+from data_set_statistic_reporter.classes.statistics_printer.document_statistics_printer import DocumentStatisticsPrinter
+from data_set_statistic_reporter.classes.statistics_printer.statistics_printer import StatisticsPrinter
 from data_set_statistic_reporter.exceptions.reporter_exceptions import WrongInputFormatError, NonIterableObjectError
 
 ERROR_STRING = colored('\n@ERROR ', 'red')
@@ -24,7 +26,10 @@ SUCCESS_STRING = colored('SUCCESS', 'green')
 
 
 def create_data_sets_statistics_document(loaded_data_sets: List[DataSetInfo]):
-    statistic_reporter = StatisticReporter()
+    statistics_printer: StatisticsPrinter = DocumentStatisticsPrinter(
+        "C:/Users/Sale/Desktop/MASTER_PROJEKAT/automatization_of_data_mining_project/automatization_of_data_mining_project/generated_statistics")
+
+    statistic_reporter = StatisticReporter(statistics_printer=statistics_printer)
     data_sets_as_statistic_reporter_data = create_statistic_reporter_data(loaded_data_sets)
     try:
         statistic_reporter.print_statistic(data_sets_as_statistic_reporter_data)

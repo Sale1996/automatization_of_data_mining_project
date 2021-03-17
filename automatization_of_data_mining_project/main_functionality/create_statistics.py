@@ -2,7 +2,7 @@ from typing import List
 
 from termcolor import colored
 
-from data_set_remover.classes.data_class.data_set_info import DataSetInfo
+from data_set_info_data_class.data_class.data_set_info import DataSetInfo
 from data_set_statistic_reporter import StatisticReporter
 from data_set_statistic_reporter.classes.data_class.statistic_reporter_data_class import StatisticReporterDataClass
 from data_set_statistic_reporter.classes.statistic_generator.implementations.column_names_statistic_generator import \
@@ -25,9 +25,8 @@ ERROR_RETURN_VALUE = -1
 SUCCESS_STRING = colored('SUCCESS', 'green')
 
 
-def create_data_sets_statistics_document(loaded_data_sets: List[DataSetInfo]):
-    statistics_printer: StatisticsPrinter = DocumentStatisticsPrinter(
-        "C:/Users/Sale/Desktop/MASTER_PROJEKAT/automatization_of_data_mining_project/automatization_of_data_mining_project/generated_statistics")
+def create_data_sets_statistics_document(loaded_data_sets: List[DataSetInfo], document_path):
+    statistics_printer: StatisticsPrinter = DocumentStatisticsPrinter(document_path)
 
     statistic_reporter = StatisticReporter(statistics_printer=statistics_printer)
     data_sets_as_statistic_reporter_data = create_statistic_reporter_data(loaded_data_sets)

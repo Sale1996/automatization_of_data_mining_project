@@ -1,10 +1,10 @@
 from pip._vendor.distlib.compat import raw_input
 from termcolor import colored
 
+from data_set_info_data_class.data_class.data_set_info import DataSetInfo
 from data_set_loader import Loader
 from data_set_loader.exceptions.loader_exceptions import WrongPathNameFormatError, FileIsNotFoundError, \
     MissingImportantColumnsError
-from data_set_remover.classes.data_class.data_set_info import DataSetInfo
 
 ERROR_STRING = colored('\n@ERROR ', 'red')
 ERROR_RETURN_VALUE = -1

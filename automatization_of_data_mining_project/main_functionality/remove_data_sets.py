@@ -3,9 +3,9 @@ from typing import List
 from pip._vendor.distlib.compat import raw_input
 from termcolor import colored
 
+from data_set_info_data_class.data_class.data_set_info import DataSetInfo
 from data_set_remover import Remover
 from data_set_remover.classes.data_class.data_for_criteria_remove import DataForCriteriaRemove
-from data_set_remover.classes.data_class.data_set_info import DataSetInfo
 from data_set_remover.exceptions.remover_exceptions import WrongInputFormatError, NonIterableObjectError, \
     NonExistingDataSetWithGivenNameError, ColumnArraysShouldNotBeBothEmpty, ColumnArraysShouldNotBeBothFilled, \
     WrongCriteriaNameError, MissingColumnToIncludeError, MissingPercentCriteriaValueMustBeBetween1and99, \

@@ -37,6 +37,10 @@ class VarianceStatisticGenerator(StatisticGenerator):
         data_set_column_rows = data_set[column_name]
 
         n = data_set_column_rows.shape[0]
+
+        if n == 0:
+            return 0, 0, 0
+
         mean = data_set_column_rows.sum() / n
 
         variance = self.calculate_variance(data_set_column_rows, mean, n)

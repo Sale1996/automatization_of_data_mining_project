@@ -1,6 +1,6 @@
 from typing import List
 
-from data_set_slicer.classes.data_class.data_set_info import DataSetInfo
+from data_set_info_data_class.data_class.data_set_info import DataSetInfo
 
 
 class DataFrameSlicer(object):

@@ -1,6 +1,6 @@
 from typing import List
 
-from data_set_remover.classes.data_class.data_set_info import DataSetInfo
+from data_set_info_data_class.data_class.data_set_info import DataSetInfo
 from data_set_remover.classes.remover_validator.manually_remover_validator.manually_remover_validator import \
     ManuallyRemoverValidator
 from data_set_remover.exceptions.remover_exceptions import WrongInputFormatError, NonExistingDataSetWithGivenNameError, \

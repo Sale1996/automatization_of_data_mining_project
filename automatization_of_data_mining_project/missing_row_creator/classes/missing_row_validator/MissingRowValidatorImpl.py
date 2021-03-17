@@ -1,4 +1,4 @@
-from missing_row_creator.classes.data_classes.data_set_info import DataSetInfo
+from data_set_info_data_class.data_class.data_set_info import DataSetInfo
 from missing_row_creator.classes.missing_row_validator.missing_row_validator import MissingRowValidator
 from missing_row_creator.exceptions.missing_row_creator_exceptions import WrongInputFormatError, NonIterableObjectError, \
     MissingFirstColumnPairError, MissingSecondColumnPairError

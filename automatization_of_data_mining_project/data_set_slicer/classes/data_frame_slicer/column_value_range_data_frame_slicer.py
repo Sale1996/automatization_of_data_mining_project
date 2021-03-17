@@ -1,6 +1,6 @@
 from typing import List, Tuple
 
-from data_set_slicer.classes.data_class.data_set_info import DataSetInfo
+from data_set_info_data_class.data_class.data_set_info import DataSetInfo
 from data_set_slicer.classes.data_frame_slicer.data_frame_slicer import DataFrameSlicer
 from data_set_slicer.exceptions.slicer_exceptions import WrongRangeObjectFormatError, EmptyResultsError
 
@@ -12,7 +12,7 @@ class ColumnValueRangeDataFrameSlicer(DataFrameSlicer):
         self.year_range = year_range
 
     def slice_data_sets(self, data_sets_info: List[DataSetInfo]) -> List[DataSetInfo]:
-        self.check_if_any_of_data_sets_contains_data_in_year_range(data_sets_info)
+        # self.check_if_any_of_data_sets_contains_data_in_year_range(data_sets_info)
 
         sliced_data_set_sets_info = []
         for data_set_info in data_sets_info:

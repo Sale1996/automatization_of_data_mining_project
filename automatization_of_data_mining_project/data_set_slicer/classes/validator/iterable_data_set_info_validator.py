@@ -1,4 +1,4 @@
-from data_set_slicer.classes.data_class.data_set_info import DataSetInfo
+from data_set_info_data_class.data_class.data_set_info import DataSetInfo
 from data_set_slicer.classes.validator.data_slicer_validator import DataSlicerValidator
 from data_set_slicer.exceptions.slicer_exceptions import WrongInputFormatError, NonIterableObjectError
 

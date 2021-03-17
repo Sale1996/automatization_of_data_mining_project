@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import List
 
-from data_set_remover.classes.data_class.data_set_info import DataSetInfo
+from data_set_info_data_class.data_class.data_set_info import DataSetInfo
 
 '''
     Note: 

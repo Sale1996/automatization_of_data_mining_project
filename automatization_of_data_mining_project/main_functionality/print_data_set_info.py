@@ -2,8 +2,8 @@ from typing import List
 
 from termcolor import colored
 
+from data_set_info_data_class.data_class.data_set_info import DataSetInfo
 from data_sets_reporter.exceptions.register_exeptions import WrongInputFormatError, NonIterableObjectError
-from data_set_remover.classes.data_class.data_set_info import DataSetInfo
 from data_sets_reporter import Reporter
 from data_sets_reporter.classes.data_class.data_set_info_for_reporter import DataSetInfoForReporter
 

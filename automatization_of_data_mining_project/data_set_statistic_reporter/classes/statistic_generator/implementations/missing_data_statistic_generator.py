@@ -38,5 +38,8 @@ class MissingDataStatisticGenerator(StatisticGenerator):
     def __calculate_data_statistics(self, column_name, data_set):
         total_number_of_data = data_set[column_name].shape[0]
         total_number_of_missing_data = data_set[column_name].isnull().sum()
-        percent_of_missing_data = round(total_number_of_missing_data / total_number_of_data * 100, 2)
+        if total_number_of_data == 0:
+            percent_of_missing_data = 100
+        else:
+            percent_of_missing_data = round(total_number_of_missing_data / total_number_of_data * 100, 2)
         return percent_of_missing_data, total_number_of_data, total_number_of_missing_data

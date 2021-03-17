@@ -1,6 +1,6 @@
 from typing import List
 
-from data_set_slicer.classes.data_class.data_set_info import DataSetInfo
+from data_set_info_data_class.data_class.data_set_info import DataSetInfo
 from data_set_slicer.classes.data_frame_slicer.data_frame_slicer import DataFrameSlicer
 from data_set_slicer.exceptions.slicer_exceptions import EmptyResultsError
 
@@ -12,7 +12,7 @@ class CrossSectionDataFrameSlicer(DataFrameSlicer):
     def slice_data_sets(self, data_sets_info: List[DataSetInfo]) -> List[DataSetInfo]:
         intersection_values = self.get_cross_section_of_unique_values_of_column_of_data_sets(data_sets_info)
 
-        self.check_is_there_not_cross_section(intersection_values)
+        # self.check_is_there_not_cross_section(intersection_values)
 
         sliced_data_set_sets_info = []
         for data_set_info in data_sets_info:

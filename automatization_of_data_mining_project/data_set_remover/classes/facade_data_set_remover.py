@@ -1,5 +1,6 @@
 from typing import List
 
+from data_set_info_data_class.data_class.data_set_info import DataSetInfo
 from data_set_remover.classes.criteria_validator_informer.criteria_validator_informer import CriteriaValidatorInformer
 from data_set_remover.classes.data_class.data_for_criteria_remove import DataForCriteriaRemove
 from data_set_remover.classes.remover.criteria_remover.criteria_remover import CriteriaRemover
@@ -8,7 +9,6 @@ from data_set_remover.classes.remover_validator.criteria_remover_validator.crite
     CriteriaRemoverValidator
 from data_set_remover.classes.remover_validator.manually_remover_validator.manually_remover_validator import \
     ManuallyRemoverValidator
-from data_set_remover.classes.data_class.data_set_info import DataSetInfo
 from data_set_remover.classes.data_set_remover import DataSetRemover
 
 

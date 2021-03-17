@@ -3,7 +3,7 @@ import unittest
 import pandas
 from pandas._testing import assert_frame_equal
 
-from missing_row_creator.classes.data_classes.data_set_info import DataSetInfo
+from data_set_info_data_class.data_class.data_set_info import DataSetInfo
 from missing_row_creator.depedency_injector.container import Container
 from missing_row_creator.exceptions.missing_row_creator_exceptions import WrongInputFormatError, NonIterableObjectError, \
     MissingFirstColumnPairError, MissingSecondColumnPairError

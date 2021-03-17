@@ -1,0 +1,4 @@
+from missing_row_creator.depedency_injector.container import Container
+from missing_row_creator.classes.missing_row_creator import MissingRowCreator
+
+MissingRowCreator: MissingRowCreator = Container.missing_row_creator

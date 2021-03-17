@@ -11,9 +11,11 @@ class NonIterableObjectError(Error):
     pass
 
 
-class MissingYearColumnError(Error):
+class MissingFirstColumnPairError(Error):
     pass
 
 
-class MissingCountryCodeColumnError(Error):
+class MissingSecondColumnPairError(Error):
     pass
+
+

@@ -47,26 +47,6 @@ class DataSetsSlicerTestErrorCases(DataSetsSlicerTestBase):
         with self.assertRaises(WrongInputFormatError):
             data_set_slicer.slice_data_sets([1, 2, 3])
 
-    # def test_given_data_sets_without_column_value_cross_section_throw_empty_results_error(self):
-    #     slicer: DataFrameSlicer = CrossSectionDataFrameSlicer("Country Code")
-    #     data_set_slicer = Container.data_set_slicer([slicer])
-    #
-    #     data_frame_values = [[1900, "JPN", 1], [1950, "JPN", 2], [1990, "JPN", ], [2010, "JPN", ], [2020, "JPN", ],
-    #                          [1996, "JPN", ]]
-    #     data_frame_values2 = [[1900, "SRB", 1], [1950, "SRB", 2], [1990, "SRB", ], [2010, "SRB", ], [2020, "SRB", 5],
-    #                           [1996, "SRB", 6]]
-    #
-    #     data_frame_1_columns = ['Year', 'Country Code', 'Test']
-    #     data_frame_2_columns = ['Year', 'Country Code', 'Test2']
-    #
-    #     data_set_info_1, data_set_info_2 = get_data_set_info_object("Test", data_frame_values,
-    #                                                                 data_frame_1_columns,
-    #                                                                 "Test2", data_frame_values2,
-    #                                                                 data_frame_2_columns,
-    #                                                                 ["Year", "Country Code"], ["Test"], ["Test2"])
-    #     with self.assertRaises(EmptyResultsError):
-    #         data_set_slicer.slice_data_sets([data_set_info_1, data_set_info_2])
-
     def test_given_non_array_range_object_when_slice_data_sets_throw_non_array_range_object(self):
         with self.assertRaises(WrongRangeObjectFormatError):
             ColumnValueRangeDataFrameSlicer("Year", "Test")
@@ -79,14 +59,6 @@ class DataSetsSlicerTestErrorCases(DataSetsSlicerTestBase):
     def test_given_wrong_column_range_array_element_types_when_slice_data_sets_throw_wrong_input_format_error(self):
         with self.assertRaises(WrongRangeObjectFormatError):
             ColumnValueRangeDataFrameSlicer("Year", ("1", "2"))
-
-    # def test_given_column_range_which_don_t_have_any_data_when_slice_data_sets_throw_wrong_input_format_error(self):
-    #     slicer: DataFrameSlicer = ColumnValueRangeDataFrameSlicer("Year", (100, 150))
-    #     data_set_slicer = Container.data_set_slicer([slicer])
-    #     data_set_info_1, data_set_info_2 = get_test_data_set_infos()
-    #
-    #     with self.assertRaises(EmptyResultsError):
-    #         data_set_slicer.slice_data_sets([data_set_info_1, data_set_info_2])
 
 
 class DataSetsSlicerCrossSectionByColumnValuesDummyCases(DataSetsSlicerTestBase):

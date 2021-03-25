@@ -10,7 +10,7 @@ from data_set_slicer.classes.data_frame_slicer.cross_section_data_frame_slicer i
 from data_set_slicer.classes.data_frame_slicer.data_frame_slicer import DataFrameSlicer
 from data_set_slicer.depedency_injector.container import Container
 from data_set_slicer.exceptions.slicer_exceptions import WrongInputFormatError, NonIterableObjectError, \
-    NonExistingSlicingMethodError, EmptyResultsError, WrongRangeObjectFormatError
+    NonExistingSlicingMethodError, WrongRangeObjectFormatError
 
 
 class DataSetsSlicerTestBase(unittest.TestCase):

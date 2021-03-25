@@ -1,0 +1,4 @@
+from data_set_preprocessor.classes.data_set_preprocessor import DataSetPreprocessor
+from data_set_preprocessor.depedency_injector.container import Container
+
+Preprocessor: DataSetPreprocessor = Container.data_set_preprocessor

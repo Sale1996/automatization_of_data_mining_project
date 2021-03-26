@@ -9,11 +9,11 @@ from missing_row_creator.exceptions.missing_row_creator_exceptions import WrongI
     MissingFirstColumnPairError, MissingSecondColumnPairError
 
 
-class DataSetsListingTestBase(unittest.TestCase):
+class MissingRowCreatorTestBase(unittest.TestCase):
     pass
 
 
-class MissingRowCreatorTestErrorCases(DataSetsListingTestBase):
+class MissingRowCreatorTestErrorCases(MissingRowCreatorTestBase):
     def test_given_None_when_create_missing_rows_then_throw_input_format_exception(self):
         missing_row_creator = Container.missing_row_creator()
         with self.assertRaises(WrongInputFormatError):

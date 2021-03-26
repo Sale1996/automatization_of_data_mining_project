@@ -1,0 +1,4 @@
+from predictions_error_calculator.classes.predictions_error_calculator import PredictionsErrorCalculator
+from predictions_error_calculator.depedency_injector.container import Container
+
+ErrorCalculator: PredictionsErrorCalculator = Container.predictions_error_calculator

@@ -17,7 +17,7 @@ class FacadeDataSetDimensionReductioner(DataSetDimensionReductioner):
         dimension_reduction_objects = []
 
         for dimension_reductioner in self.dimension_reductioners:
-            dimension_reduction_objects.append(dimension_reductioner.reduce_dimensionality(x_data, y_data))
+            dimension_reduction_objects.extend(dimension_reductioner.reduce_dimensionality(x_data, y_data))
 
         return dimension_reduction_objects
 

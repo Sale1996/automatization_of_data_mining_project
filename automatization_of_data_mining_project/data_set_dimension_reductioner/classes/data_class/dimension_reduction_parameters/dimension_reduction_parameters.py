@@ -1,0 +1,2 @@
+class DimensionReductionParameters(object):
+    pass

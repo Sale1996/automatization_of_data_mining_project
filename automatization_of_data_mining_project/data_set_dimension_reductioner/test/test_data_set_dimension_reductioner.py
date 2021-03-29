@@ -13,7 +13,7 @@ from data_set_dimension_reductioner.classes.dimension_reduction.random_forest_di
     RandomForestDimensionReduction
 from data_set_dimension_reductioner.dependency_injector.container import Container
 from data_set_dimension_reductioner.exceptions.dimension_reduction_exceptions import WrongInputFormatError, \
-    NoStringValuesAllowedInDataSetError
+    NoStringValuesAllowedInDataSetError, NonIterableObjectError
 
 
 class DataSetDimensionReductionTestBase(unittest.TestCase):
@@ -48,6 +48,26 @@ class DataSetDimensionReductionErrorCases(DataSetDimensionReductionTestBase):
 
         with self.assertRaises(NoStringValuesAllowedInDataSetError):
             data_set_dimension_reductioner.get_reduced_data_sets(data_frame, data_frame)
+
+    def test_given_none_when_get_dimension_reductioner_report_data_then_throw_wrong_input_format_error(self):
+        data_set_dimension_reductioner = Container.data_set_dimension_reductioner(dimension_reductioners=[])
+
+        with self.assertRaises(WrongInputFormatError):
+            data_set_dimension_reductioner.get_report_data(None)
+
+    def test_given_non_array_input_when_get_dimension_reductioner_report_data_then_throw_not_iterable_object_error(
+            self):
+        data_set_dimension_reductioner = Container.data_set_dimension_reductioner(dimension_reductioners=[])
+
+        with self.assertRaises(NonIterableObjectError):
+            data_set_dimension_reductioner.get_report_data(1)
+
+    def test_given_wrong_array_element_type_when_dimension_reductioner_report_data_then_throw_wrong_input_format_error(
+            self):
+        data_set_dimension_reductioner = Container.data_set_dimension_reductioner(dimension_reductioners=[])
+
+        with self.assertRaises(WrongInputFormatError):
+            data_set_dimension_reductioner.get_report_data([1])
 
 
 class DataSetDimensionReductionDummyCases(DataSetDimensionReductionTestBase):
@@ -133,3 +153,34 @@ class DataSetDimensionReductionDummyCases(DataSetDimensionReductionTestBase):
         number_of_columns = dimension_reduction_results[0].reduced_data_set.shape[1]
 
         self.assertEqual(2, number_of_columns)
+
+    def test_given_data_frame_when_dimension_reductioner_report_data_then_return_correct_report_data_set(
+            self):
+        # THIS IS USED ONLY AS TEST OF CREATION OF DOCUMENT, NOT AS REAL TEST CASE
+        low_variance_dimension_reduction = LowVarianceFilterDimensionReduction()
+        random_forest_dimension_reduction = RandomForestDimensionReduction()
+        pca_dimension_reduction = PCADimensionReduction()
+        factor_analysis_dimension_reduction = FactorAnalysisDimensionReduction()
+
+        data_set_dimension_reductioner = Container.data_set_dimension_reductioner(
+            dimension_reductioners=[low_variance_dimension_reduction,
+                                    random_forest_dimension_reduction,
+                                    pca_dimension_reduction,
+                                    factor_analysis_dimension_reduction]
+        )
+
+        data_frame_values = [[1901, "JPN", 3], [1900, "SRB", 2], [2000, "JPN", 2], [2000, "SRB", 2]]
+        data_frame_1_columns = ['Year', 'Country Code', 'Test']
+        df = pandas.DataFrame(data_frame_values, columns=data_frame_1_columns)
+        df_x_values = df[['Year', 'Country Code']]
+        df_y_values = df[['Test']]
+        df_x_values = pandas.get_dummies(df_x_values)
+
+        dimension_reduction_results: List[
+            DimensionReductionResult] = data_set_dimension_reductioner.get_reduced_data_sets(df_x_values,
+                                                                                             df_y_values)
+
+        data_set_dimension_reductioner.get_report_data(dimension_reduction_results,
+                                                       "C:/Users/Sale/Desktop/MASTER_PROJEKAT/automatization_of_data_mining_project/automatization_of_data_mining_project/generated_statistics/dimension_reduction_statistics")
+
+        self.assertEqual(1, 1)

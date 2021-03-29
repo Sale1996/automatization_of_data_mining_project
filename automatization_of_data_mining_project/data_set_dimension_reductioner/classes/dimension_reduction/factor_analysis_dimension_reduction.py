@@ -26,6 +26,12 @@ class FactorAnalysisDimensionReduction(DimensionReduction):
                 n_components=parameters_object.number_of_components).fit_transform(
                 x_data.values)
 
-            reduced_data_sets.append(DimensionReductionResult("Factor Analysis", factor_analysis_reduced_data_set))
+            number_of_columns_before = x_data.shape[1]
+            number_of_columns_after = factor_analysis_reduced_data_set.shape[1]
+
+            name = "Factor Analysis" + "| Parameters: Number of components = " + str(parameters_object.number_of_components)
+
+            reduced_data_sets.append(DimensionReductionResult(name, factor_analysis_reduced_data_set,
+                                                              number_of_columns_before, number_of_columns_after))
 
         return reduced_data_sets

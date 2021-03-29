@@ -37,7 +37,13 @@ class RandomForestDimensionReduction(DimensionReduction):
                 reduced_columns.append(features[indice])
             random_forest_reduced_data_set = x_data[reduced_columns]
 
+            number_of_columns_before = x_data.shape[1]
+            number_of_columns_after = random_forest_reduced_data_set.shape[1]
+
+            name = "Random Forest reduction" + "| Parameters: Number of features = " + str(parameters_object.number_of_features) + "; Random state = " + str(parameters_object.random_state) + "; Max depth = " + str(parameters_object.max_depth)
+
             reduced_data_sets.append(
-                DimensionReductionResult("Random Forest reduction", random_forest_reduced_data_set.values))
+                DimensionReductionResult(name, random_forest_reduced_data_set.values,
+                                         number_of_columns_before, number_of_columns_after))
 
         return reduced_data_sets

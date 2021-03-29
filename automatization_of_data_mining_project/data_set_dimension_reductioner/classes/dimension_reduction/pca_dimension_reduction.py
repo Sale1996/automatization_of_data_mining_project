@@ -24,6 +24,12 @@ class PCADimensionReduction(DimensionReduction):
         for parameters_object in self.parameters:
             pca = PCA(n_components=parameters_object.number_of_components)
             pca_reduced_data_set = pca.fit_transform(x_data.values)
-            reduced_data_sets.append(DimensionReductionResult("PCA", pca_reduced_data_set))
+            number_of_columns_before = x_data.shape[1]
+            number_of_columns_after = pca_reduced_data_set.shape[1]
+
+            name = "PCA" + "| Parameters: Number of components = " + str(parameters_object.number_of_components)
+
+            reduced_data_sets.append(DimensionReductionResult(name, pca_reduced_data_set,
+                                                              number_of_columns_before, number_of_columns_after))
 
         return reduced_data_sets

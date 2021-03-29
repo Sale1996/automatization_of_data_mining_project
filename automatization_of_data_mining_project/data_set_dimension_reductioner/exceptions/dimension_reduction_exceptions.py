@@ -9,3 +9,7 @@ class WrongInputFormatError(Error):
 
 class NoStringValuesAllowedInDataSetError(Error):
     pass
+
+
+class NonIterableObjectError(Error):
+    pass

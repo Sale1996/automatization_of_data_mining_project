@@ -1,7 +1,5 @@
 from typing import List
 
-from data_set_dimension_reductioner.classes.data_class.dimension_reduction_parameters.factor_analysis_parameters import \
-    FactorAnalysisParameters
 from data_set_dimension_reductioner.classes.data_class.dimension_reduction_parameters.low_variance_filter_parameters import \
     LowVarianceFilterParameters
 from data_set_dimension_reductioner.classes.data_class.dimension_reduction_result import DimensionReductionResult
@@ -30,7 +28,14 @@ class LowVarianceFilterDimensionReduction(DimensionReduction):
                     passed_columns.append(variables[i])
             low_variance_filter_reduced_data_set = x_data[passed_columns]
 
+            number_of_columns_before = x_data.shape[1]
+            number_of_columns_after = low_variance_filter_reduced_data_set.shape[1]
+
+            name = "Low variance filter" + "| Parameters: Variance threshold = " + str(
+                parameters_object.variance_threshold)
+
             reduced_data_sets.append(
-                DimensionReductionResult("Low variance filter", low_variance_filter_reduced_data_set.values))
+                DimensionReductionResult(name, low_variance_filter_reduced_data_set.values,
+                                         number_of_columns_before, number_of_columns_after))
 
         return reduced_data_sets

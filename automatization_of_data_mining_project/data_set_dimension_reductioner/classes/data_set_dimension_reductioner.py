@@ -7,5 +7,5 @@ class DataSetDimensionReductioner(object):
     def get_reduced_data_sets(self, x_data, y_data):
         pass
 
-    def get_report_data(self, reduced_data: List[DimensionReductionResult]):
+    def create_dimension_reduction_statistics(self, reduced_data: List[DimensionReductionResult]):
         pass

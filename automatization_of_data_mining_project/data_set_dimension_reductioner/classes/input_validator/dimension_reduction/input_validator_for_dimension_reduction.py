@@ -1,10 +1,10 @@
-from data_set_dimension_reductioner.classes.input_validator.input_validator import InputValidator
+from data_set_dimension_reductioner.classes.input_validator.dimension_reduction.input_validator import InputValidator
 import pandas
 from data_set_dimension_reductioner.exceptions.dimension_reduction_exceptions import WrongInputFormatError, \
     NoStringValuesAllowedInDataSetError
 
 
-class InputValidatorImpl(InputValidator):
+class InputValidatorForDimensionReduction(InputValidator):
     def validate(self, x_data, y_data):
         if x_data is None or y_data is None:
             raise WrongInputFormatError

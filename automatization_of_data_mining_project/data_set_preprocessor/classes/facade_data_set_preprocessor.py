@@ -27,8 +27,7 @@ class FacadeDataSetPreprocessor(DataSetPreprocessor):
 
         return processed_data
 
-    def get_train_validation_test_split_of_data_set(self, x_data, y_data, test_data_percentage, validation_data_percentage):
+    def get_train_validation_test_split_of_data_set(self, x_data, y_data, test_data_percentage):
         self.data_set_splitter_validator.validate_input(x_data, y_data)
 
-        return self.data_set_splitter.split_data_set_into_train_validation_test(x_data, y_data, test_data_percentage,
-                                                                                validation_data_percentage)
+        return self.data_set_splitter.split_data_set_into_train_validation_test(x_data, y_data, test_data_percentage)

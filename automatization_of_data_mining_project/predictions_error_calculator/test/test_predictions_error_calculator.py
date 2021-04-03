@@ -17,11 +17,11 @@ class PredictionsErrorCalculatorTestErrorCases(PredictionsErrorCalculatorTestBas
     def setUp(self) -> None:
         self.predictions_error_calculator = Container.predictions_error_calculator(error_calculators=[])
 
-    def test_given_None_when_create_missing_rows_then_throw_input_format_exception(self):
+    def test_given_None_when_calculate_error_then_throw_input_format_exception(self):
         with self.assertRaises(WrongInputFormatError):
             self.predictions_error_calculator.calculate_errors(None, None)
 
-    def test_given_non_array_element_create_missing_rows_then_throw_non_iterable_exception(self):
+    def test_given_non_array_element_create_missing_rows_when_calculate_error_then_throw_non_iterable_exception(self):
         non_iterable_object = 1
 
         with self.assertRaises(NonIterableObjectError):

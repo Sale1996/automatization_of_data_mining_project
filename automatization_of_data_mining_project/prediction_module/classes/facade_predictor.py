@@ -28,7 +28,8 @@ class FacadePredictor(object):
     def get_fitted_predictor_by_name(self, input_data: PreprocessedDataSetInfo, predictor_name: str):
         for predictor in self.predictors:
             if predictor.predictor_name == predictor_name:
-                return predictor.fit(input_data)
+                predictor.fit(input_data)
+                return predictor
 
     def save_predictors(self, predictors: List[Predictor], document_path: str):
         pass

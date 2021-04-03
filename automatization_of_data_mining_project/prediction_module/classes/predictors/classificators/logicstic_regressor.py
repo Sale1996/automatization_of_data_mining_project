@@ -17,7 +17,7 @@ class LogisticRegressor(Predictor):
 
     def fit(self, processed_data: PreprocessedDataSetInfo):
         parameters = [{'random_state': [0, 1, 2, 5]}]
-        grid_search = GridSearchCV(estimator=LogisticRegression,
+        grid_search = GridSearchCV(estimator=LogisticRegression(),
                                    param_grid=parameters,
                                    scoring='accuracy',
                                    cv=10,

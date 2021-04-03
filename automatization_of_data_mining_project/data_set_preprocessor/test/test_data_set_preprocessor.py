@@ -28,7 +28,7 @@ class DataSetPreprocessorErrorCases(DataSetPreprocessorTestBase):
 
     def test_given_nones_when_get_train_validation_test_data_sets_then_throw_input_format_exception(self):
         with self.assertRaises(WrongInputFormatError):
-            self.data_set_preprocessor.get_train_validation_test_split_of_data_set(None, None, None)
+            self.data_set_preprocessor.get_train_test_split_of_data_set(None, None, None)
 
     def test_given_wrong_input_type_get_train_validation_test_data_sets_then_throw_input_format_exception(self):
         with self.assertRaises(WrongInputFormatError):
@@ -55,7 +55,7 @@ class DataSetPreprocessorDummyCases(DataSetPreprocessorTestBase):
         x_columns.remove('Numerical Column')
         x_data = data_set[x_columns]
         y_data = data_set[['Numerical Column']]
-        preprocessed_data_set_object: PreprocessedDataSetInfo = data_set_preprocessor.get_train_validation_test_split_of_data_set(
+        preprocessed_data_set_object: PreprocessedDataSetInfo = data_set_preprocessor.get_train_test_split_of_data_set(
             x_data, y_data, 0.2)
 
         train_set_length = len(preprocessed_data_set_object.x_train)

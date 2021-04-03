@@ -17,7 +17,7 @@ class RandomForestClassification(Predictor):
 
     def fit(self, processed_data: PreprocessedDataSetInfo):
         parameters = [{'n_estimators': [10, 15, 20, 5], 'random_state': [0, 1, 2, 5], 'criterion': ['entropy']}]
-        grid_search = GridSearchCV(estimator=RandomForestClassifier,
+        grid_search = GridSearchCV(estimator=RandomForestClassifier(),
                                    param_grid=parameters,
                                    scoring='accuracy',
                                    cv=10,

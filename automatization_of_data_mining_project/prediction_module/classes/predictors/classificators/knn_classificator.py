@@ -16,8 +16,8 @@ class KNNClassificator(Predictor):
         self.best_accuracy = None
 
     def fit(self, processed_data: PreprocessedDataSetInfo):
-        parameters = [{'n_neighbors': [3, 5, 7, 10], 'metric': [0, 1, 2, 5, 10], 'p': [2]}]
-        grid_search = GridSearchCV(estimator=KNeighborsClassifier,
+        parameters = [{'n_neighbors': [3, 5, 7, 10], 'p': [2]}]
+        grid_search = GridSearchCV(estimator=KNeighborsClassifier(),
                                    param_grid=parameters,
                                    scoring='accuracy',
                                    cv=10,

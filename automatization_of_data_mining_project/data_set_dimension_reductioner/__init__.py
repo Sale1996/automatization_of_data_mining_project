@@ -1,0 +1,4 @@
+from data_set_dimension_reductioner.classes.data_set_dimension_reductioner import DataSetDimensionReductioner
+from data_set_dimension_reductioner.dependency_injector.container import Container
+
+DimensionReducer: DataSetDimensionReductioner = Container.data_set_dimension_reductioner

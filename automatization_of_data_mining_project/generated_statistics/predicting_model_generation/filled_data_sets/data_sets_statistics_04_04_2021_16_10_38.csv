@@ -1,0 +1,9 @@
+a
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,corruption_index - Total number of data,corruption_index - Total number of missing data,corruption_index - Total percent of missing data
+"Country Code, Year, corruption_index",1990-2017,157,2004,8,65.25,4396,1899,43.2
+1
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,Access to electricity (% of population) - Total number of data,Access to electricity (% of population) - Total number of missing data,Access to electricity (% of population) - Total percent of missing data
+"Country Code, Year, Access to electricity (% of population)",1990-2017,157,2004,8,65.25,4396,0,0.0
+dwa
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,Legal environment - Total number of data,Legal environment - Total number of missing data,Legal environment - Total percent of missing data,Political environment - Total number of data,Political environment - Total number of missing data,Political environment - Total percent of missing data,Economic environment - Total number of data,Economic environment - Total number of missing data,Economic environment - Total percent of missing data,Total Score - Total number of data,Total Score - Total number of missing data,Total Score - Total percent of missing data
+"Country Code, Year, Legal environment, Political environment, Economic environment, Total Score",1990-2017,157,2004,8,65.25,4396,699,15.9,4396,699,15.9,4396,699,15.9,4396,699,15.9

@@ -27,20 +27,20 @@ class DataSetDimensionReductionErrorCases(DataSetDimensionReductionTestBase):
         pass
 
     def test_given_nones_when_reduce_dimension_on_data_set_then_throw_input_format_exception(self):
-        data_set_dimension_reductioner = Container.data_set_dimension_reductioner(dimension_reductioners=[])
+        data_set_dimension_reductioner = Container.data_set_dimension_reductioner(dimension_reductioners=[], statistic_reporter=None)
 
         with self.assertRaises(WrongInputFormatError):
             data_set_dimension_reductioner.get_reduced_data_sets(None, None)
 
     def test_given_non_data_frame_data_set_when_reduce_dimension_on_data_set_then_throw_input_format_exception(self):
-        data_set_dimension_reductioner = Container.data_set_dimension_reductioner(dimension_reductioners=[])
+        data_set_dimension_reductioner = Container.data_set_dimension_reductioner(dimension_reductioners=[], statistic_reporter=None)
 
         with self.assertRaises(WrongInputFormatError):
             data_set_dimension_reductioner.get_reduced_data_sets(1, 1)
 
     def test_given_data_frame_with_string_values_when_reduce_dimension_on_data_set_then_throw_no_string_values_allowed(
             self):
-        data_set_dimension_reductioner = Container.data_set_dimension_reductioner(dimension_reductioners=[])
+        data_set_dimension_reductioner = Container.data_set_dimension_reductioner(dimension_reductioners=[], statistic_reporter=None)
 
         data_set_values = [[1, "daw"], [2, "y54"], [3, "42z"], [9, "plp"], [9, "oop"]]
 
@@ -52,21 +52,21 @@ class DataSetDimensionReductionErrorCases(DataSetDimensionReductionTestBase):
             data_set_dimension_reductioner.get_reduced_data_sets(data_frame, data_frame)
 
     def test_given_none_when_get_dimension_reductioner_report_data_then_throw_wrong_input_format_error(self):
-        data_set_dimension_reductioner = Container.data_set_dimension_reductioner(dimension_reductioners=[])
+        data_set_dimension_reductioner = Container.data_set_dimension_reductioner(dimension_reductioners=[], statistic_reporter=None)
 
         with self.assertRaises(WrongInputFormatError):
             data_set_dimension_reductioner.create_dimension_reduction_statistics(None)
 
     def test_given_non_array_input_when_get_dimension_reductioner_report_data_then_throw_not_iterable_object_error(
             self):
-        data_set_dimension_reductioner = Container.data_set_dimension_reductioner(dimension_reductioners=[])
+        data_set_dimension_reductioner = Container.data_set_dimension_reductioner(dimension_reductioners=[], statistic_reporter=None)
 
         with self.assertRaises(NonIterableObjectError):
             data_set_dimension_reductioner.create_dimension_reduction_statistics(1)
 
     def test_given_wrong_array_element_type_when_dimension_reductioner_report_data_then_throw_wrong_input_format_error(
             self):
-        data_set_dimension_reductioner = Container.data_set_dimension_reductioner(dimension_reductioners=[])
+        data_set_dimension_reductioner = Container.data_set_dimension_reductioner(dimension_reductioners=[], statistic_reporter=None)
 
         with self.assertRaises(WrongInputFormatError):
             data_set_dimension_reductioner.create_dimension_reduction_statistics([1])
@@ -76,8 +76,10 @@ class DataSetDimensionReductionDummyCases(DataSetDimensionReductionTestBase):
     def test_given_data_frame_0_variance_column_when_reduce_dimension_reduction_on_data_set_with_low_variance_filter_return_same_data_set_without_that_column(
             self):
         low_variance_dimension_reduction = LowVarianceFilterDimensionReduction()
+        statistic_reporter = DimensionReductionDocumentStatisticReporter("C:/Users/Sale/Desktop/MASTER_PROJEKAT/automatization_of_data_mining_project/automatization_of_data_mining_project/generated_statistics/dimension_reduction_statistics")
+
         data_set_dimension_reductioner = Container.data_set_dimension_reductioner(
-            dimension_reductioners=[low_variance_dimension_reduction]
+            dimension_reductioners=[low_variance_dimension_reduction], statistic_reporter=statistic_reporter
         )
 
         data_set_values = [[1, 1], [2, 1], [3, 1], [9, 1], [9, 1]]
@@ -94,8 +96,10 @@ class DataSetDimensionReductionDummyCases(DataSetDimensionReductionTestBase):
     def test_given_data_frame_when_reduce_dimension_reduction_on_data_set_with_random_forest_algorithm_return_same_data_set_without_one_column(
             self):
         random_forest_dimension_reduction = RandomForestDimensionReduction()
+        statistic_reporter = DimensionReductionDocumentStatisticReporter("C:/Users/Sale/Desktop/MASTER_PROJEKAT/automatization_of_data_mining_project/automatization_of_data_mining_project/generated_statistics/dimension_reduction_statistics")
+
         data_set_dimension_reductioner = Container.data_set_dimension_reductioner(
-            dimension_reductioners=[random_forest_dimension_reduction]
+            dimension_reductioners=[random_forest_dimension_reduction], statistic_reporter=statistic_reporter
         )
 
         df_x_values, df_y_values = self.get_x_y_values()
@@ -110,8 +114,10 @@ class DataSetDimensionReductionDummyCases(DataSetDimensionReductionTestBase):
     def test_given_data_frame_when_reduce_dimension_reduction_on_data_set_with_principal_component_analysis_algorithm_return_same_data_set_without_one_column(
             self):
         pca_dimension_reduction = PCADimensionReduction()
+        statistic_reporter = DimensionReductionDocumentStatisticReporter("C:/Users/Sale/Desktop/MASTER_PROJEKAT/automatization_of_data_mining_project/automatization_of_data_mining_project/generated_statistics/dimension_reduction_statistics")
+
         data_set_dimension_reductioner = Container.data_set_dimension_reductioner(
-            dimension_reductioners=[pca_dimension_reduction]
+            dimension_reductioners=[pca_dimension_reduction], statistic_reporter=statistic_reporter
         )
 
         df_x_values, df_y_values = self.get_x_y_values()
@@ -127,8 +133,10 @@ class DataSetDimensionReductionDummyCases(DataSetDimensionReductionTestBase):
     def test_given_data_frame_when_reduce_dimension_reduction_on_data_set_with_factor_analysis_algorithm_return_same_data_set_without_one_column(
             self):
         factor_analysis_dimension_reduction = FactorAnalysisDimensionReduction()
+        statistic_reporter = DimensionReductionDocumentStatisticReporter("C:/Users/Sale/Desktop/MASTER_PROJEKAT/automatization_of_data_mining_project/automatization_of_data_mining_project/generated_statistics/dimension_reduction_statistics")
+
         data_set_dimension_reductioner = Container.data_set_dimension_reductioner(
-            dimension_reductioners=[factor_analysis_dimension_reduction]
+            dimension_reductioners=[factor_analysis_dimension_reduction], statistic_reporter=statistic_reporter
         )
 
         df_x_values, df_y_values = self.get_x_y_values()

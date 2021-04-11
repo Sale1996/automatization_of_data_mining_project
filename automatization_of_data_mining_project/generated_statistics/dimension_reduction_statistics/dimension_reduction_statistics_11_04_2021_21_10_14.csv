@@ -1,0 +1,12 @@
+Low variance filter| Parameters: Variance threshold = 1
+Number of columns before,Number of columns after
+164,4
+Random Forest reduction| Parameters: Number of features = 2; Random state = 1; Max depth = 10
+Number of columns before,Number of columns after
+164,2
+PCA| Parameters: Number of components = 2
+Number of columns before,Number of columns after
+164,2
+Factor Analysis| Parameters: Number of components = 2
+Number of columns before,Number of columns after
+164,2

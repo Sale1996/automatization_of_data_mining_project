@@ -8,10 +8,13 @@ from prediction_module.classes.predictors.classificators.logicstic_regressor imp
 from prediction_module.classes.predictors.classificators.random_forest_classification import RandomForestClassification
 from prediction_module.classes.predictors.classificators.support_vector_machine import SupportVectorMachine
 from prediction_module.classes.predictors.regressors.decision_tree_regression import DecisionTreeRegression
+from prediction_module.classes.predictors.regressors.elastic_regression import ElasticRegression
 from prediction_module.classes.predictors.regressors.multiple_linear_regression import MultipleLinearRegression
+from prediction_module.classes.predictors.regressors.pca_regression import PCARegression
 from prediction_module.classes.predictors.regressors.polynomial_regression import PolynomialRegression
 from prediction_module.classes.predictors.regressors.random_forest_regression import RandomForestRegression
 from prediction_module.classes.predictors.regressors.support_vector_regression import SupportVectorRegression
+from prediction_module.classes.predictors.regressors.xgb_regressor import XGBRegression
 
 
 class Container(containers.DeclarativeContainer):
@@ -22,6 +25,9 @@ class Container(containers.DeclarativeContainer):
     polynomial_regression = providers.Factory(PolynomialRegression)
     random_forest_regression = providers.Factory(RandomForestRegression)
     support_vector_regression = providers.Factory(SupportVectorRegression)
+    elastic_net_regression = providers.Factory(ElasticRegression)
+    xgb_regression = providers.Factory(XGBRegression)
+    pca_regression = providers.Factory(PCARegression)
 
     decision_tree_classification = providers.Factory(DecisionTreeClassification)
     knn_classification = providers.Factory(KNNClassificator)
@@ -38,6 +44,9 @@ class Container(containers.DeclarativeContainer):
                                                       polynomial_regression(),
                                                       random_forest_regression(),
                                                       support_vector_regression(),
+                                                      elastic_net_regression(),
+                                                      xgb_regression(),
+                                                      pca_regression(),
                                                       decision_tree_classification(),
                                                       knn_classification(),
                                                       logistic_regression(),

@@ -6,7 +6,6 @@ from typing import List
 import pandas
 from termcolor import colored
 
-from data_set_dimension_reductioner.classes.data_class.dimension_reduction_result import DimensionReductionResult
 from data_set_info_data_class.data_class.data_set_info import DataSetInfo
 from data_set_info_data_class.data_class.preprocessed_data_set_info import PreprocessedDataSetInfo
 from main_functionality.create_predicitve_models_sub_functionality.get_data_sets_with_filled_nan_values import \
@@ -64,6 +63,8 @@ def create_predictive_model_and_create_statistics(loaded_data_sets: List[DataSet
                                                                                 test_data_frame,
                                                                                 preprocessed_joined_data_frame.y_train,
                                                                                 preprocessed_joined_data_frame.y_test)
+
+        # ovde trebam da pitam da li je regresija ili klasifikacija!
 
         list_of_predictors: List[Predictor] = predictor_factory.get_fitted_regression_predictors(
             dimension_reductioned_preprocessed_data_frame)

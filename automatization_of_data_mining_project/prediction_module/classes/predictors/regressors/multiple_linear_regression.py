@@ -14,7 +14,7 @@ class MultipleLinearRegression(Predictor):
 
     def fit(self, processed_data: PreprocessedDataSetInfo):
         regressor = LinearRegression()
-        regressor.fit(processed_data.x_train, processed_data.y_train)
+        regressor.fit(processed_data.x_train, processed_data.y_train.values.ravel())
 
         self.model = regressor
 

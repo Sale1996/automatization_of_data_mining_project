@@ -1,3 +1,4 @@
+import copy
 from typing import List
 
 from data_set_info_data_class.data_class.preprocessed_data_set_info import PreprocessedDataSetInfo
@@ -22,14 +23,15 @@ class FacadePredictor(object):
         fitted_predictors = []
         for predictor in self.predictors:
             if predictor.predictor_type == predictor_type:
-                fitted_predictors.append(predictor.fit(input_data))
+                predictor.fit(input_data)
+                fitted_predictors.append(copy.deepcopy(predictor))
         return fitted_predictors
 
     def get_fitted_predictor_by_name(self, input_data: PreprocessedDataSetInfo, predictor_name: str):
         for predictor in self.predictors:
             if predictor.predictor_name == predictor_name:
                 predictor.fit(input_data)
-                return predictor
+                return copy.deepcopy(predictor)
 
     def save_predictors(self, predictors: List[Predictor], document_path: str):
         pass

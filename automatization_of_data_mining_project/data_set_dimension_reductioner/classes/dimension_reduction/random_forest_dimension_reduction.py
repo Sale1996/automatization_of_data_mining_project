@@ -27,7 +27,7 @@ class RandomForestDimensionReduction(DimensionReduction):
         for parameters_object in self.parameters:
             model = RandomForestRegressor(random_state=parameters_object.random_state,
                                           max_depth=parameters_object.max_depth)
-            model.fit(x_data, y_data)
+            model.fit(x_data, y_data.values.ravel())
             features = x_data.columns
             importances = model.feature_importances_
             indices = numpy.argsort(importances)[-parameters_object.number_of_features:]

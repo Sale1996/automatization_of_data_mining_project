@@ -18,10 +18,10 @@ class RandomForestRegression(Predictor):
         parameters = [{'n_estimators': [10, 15, 20, 5], 'random_state': [0, 1, 2, 5]}]
         grid_search = GridSearchCV(estimator=RandomForestRegressor(),
                                    param_grid=parameters,
-                                   scoring='accuracy',
+                                   scoring='r2',
                                    cv=10,
                                    n_jobs=-1)
-        grid_search.fit(processed_data.x_train, processed_data.y_train)
+        grid_search.fit(processed_data.x_train, processed_data.y_train.values.ravel())
         self.best_params = grid_search.best_params_
         self.best_accuracy = grid_search.best_score_
         self.model = grid_search.best_estimator_

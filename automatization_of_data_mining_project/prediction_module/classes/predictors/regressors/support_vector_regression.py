@@ -21,10 +21,10 @@ class SupportVectorRegression(Predictor):
                        'gamma': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]}]
         grid_search = GridSearchCV(estimator=SVR(),
                                    param_grid=parameters,
-                                   scoring='accuracy',
+                                   scoring='r2',
                                    cv=10,
                                    n_jobs=-1)
-        grid_search.fit(processed_data.x_train, processed_data.y_train)
+        grid_search.fit(processed_data.x_train, processed_data.y_train.values.ravel())
         self.best_params = grid_search.best_params_
         self.best_accuracy = grid_search.best_score_
         self.model = grid_search.best_estimator_

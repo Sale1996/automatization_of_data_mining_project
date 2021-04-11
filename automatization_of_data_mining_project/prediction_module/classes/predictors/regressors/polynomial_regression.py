@@ -17,7 +17,7 @@ class PolynomialRegression(Predictor):
     def fit(self, processed_data: PreprocessedDataSetInfo):
         x_poly = self.polynomial_features.fit_transform(processed_data.x_train)
         lin_reg_2 = LinearRegression()
-        lin_reg_2.fit(x_poly, processed_data.y_train)
+        lin_reg_2.fit(x_poly, processed_data.y_train.values.ravel())
 
         self.model = lin_reg_2
 

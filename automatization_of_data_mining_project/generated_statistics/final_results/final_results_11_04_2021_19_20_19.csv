@@ -1,0 +1,48 @@
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 1,Decision Tree Regression,184.269,0.573
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 1,Multiple Linear Regression,231.442,0.464
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 1,Polynomial Regression,157.419,0.636
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 1,Random Forest Regression,128.02,0.704
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Random Forest reduction| Parameters: Number of features = 2; Random state = 1; Max depth = 10,Decision Tree Regression,169.391,0.608
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Random Forest reduction| Parameters: Number of features = 2; Random state = 1; Max depth = 10,Multiple Linear Regression,231.747,0.464
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Random Forest reduction| Parameters: Number of features = 2; Random state = 1; Max depth = 10,Polynomial Regression,160.823,0.628
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Random Forest reduction| Parameters: Number of features = 2; Random state = 1; Max depth = 10,Random Forest Regression,130.54,0.698
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+PCA| Parameters: Number of components = 2,Decision Tree Regression,315.441,0.27
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+PCA| Parameters: Number of components = 2,Multiple Linear Regression,231.915,0.463
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+PCA| Parameters: Number of components = 2,Polynomial Regression,162.032,0.625
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+PCA| Parameters: Number of components = 2,Random Forest Regression,202.254,0.532
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Factor Analysis| Parameters: Number of components = 2,Decision Tree Regression,722.693,-0.673
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Factor Analysis| Parameters: Number of components = 2,Multiple Linear Regression,253.437,0.413
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Factor Analysis| Parameters: Number of components = 2,Polynomial Regression,460.196,-0.065
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Factor Analysis| Parameters: Number of components = 2,Random Forest Regression,469.436,-0.087
+""

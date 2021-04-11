@@ -18,10 +18,10 @@ class DecisionTreeRegression(Predictor):
         parameters = [{'random_state': [0, 1, 5, 10]}]
         grid_search = GridSearchCV(estimator=DecisionTreeRegressor(),
                                    param_grid=parameters,
-                                   scoring='accuracy',
+                                   scoring='r2',
                                    cv=10,
                                    n_jobs=-1)
-        grid_search.fit(processed_data.x_train, processed_data.y_train)
+        grid_search.fit(processed_data.x_train, processed_data.y_train.values.ravel())
         self.best_accuracy = grid_search.best_score_
         self.best_params = grid_search.best_params_
         self.model = grid_search.best_estimator_

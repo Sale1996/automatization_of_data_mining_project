@@ -41,7 +41,7 @@ class Container(containers.DeclarativeContainer):
                                                   predictors=[
                                                       decision_tree_regression(),
                                                       multiple_linear_regression(),
-                                                      polynomial_regression(),
+                                                      # polynomial_regression(), excluded due to work with huge dimensionality data set
                                                       random_forest_regression(),
                                                       support_vector_regression(),
                                                       elastic_net_regression(),

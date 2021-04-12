@@ -39,6 +39,30 @@ def get_preprocessed_data_frame(data_frame: pandas.DataFrame):
             chosen_column = map_menu_index_to_column_name[user_choice]
             break
 
+    predictor_column_type = ""
+    while True:
+        preprocessed_step_prediction_column_type_menu = ('----------------------------------------------------------\n'
+                                                         '|            Data set preprocessor                       |\n'
+                                                         '|--------------------------------------------------------|\n'
+                                                         ' Which type is chosen prediction column:                  \n'
+                                                         '                                                          \n'
+                                                         ' 1) Continual value                                       \n'
+                                                         ' 2) Categorical value                                     \n'
+                                                         '                                                          \n'
+                                                         ' Choose:')
+
+        user_type_choice = raw_input(preprocessed_step_prediction_column_type_menu)
+
+        if user_type_choice == "1":
+            predictor_column_type = "continual_value"
+            break
+        elif user_type_choice == "2":
+            predictor_column_type = "categorical_value"
+            break
+        else:
+            print(ERROR_STRING, "Input value must be 1 or 2!")
+            continue
+
     one_hot_encode_processing_method = OneHotEncoderProcessingMethod()
     data_set_preprocessor = Preprocessor(processing_methods=[one_hot_encode_processing_method])
 
@@ -50,4 +74,4 @@ def get_preprocessed_data_frame(data_frame: pandas.DataFrame):
     preprocessed_data_set: PreprocessedDataSetInfo = data_set_preprocessor.get_train_test_split_of_data_set(
         x_data, y_data, 0.2)
 
-    return preprocessed_data_set
+    return preprocessed_data_set, predictor_column_type

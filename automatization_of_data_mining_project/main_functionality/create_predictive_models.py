@@ -46,7 +46,7 @@ def create_predictive_model_and_create_statistics(loaded_data_sets: List[DataSet
     joined_data_frame = get_joined_data_set(data_sets_with_filled_nan_values)
 
     # preprocess joined data set
-    preprocessed_joined_data_frame = get_preprocessed_data_frame(joined_data_frame)
+    preprocessed_joined_data_frame, predictor_column_type = get_preprocessed_data_frame(joined_data_frame)
 
     # generate dimension reduction models
     train_dimension_reduction_results, test_dimension_reduction_results = get_dimensionality_reduced_data_sets(
@@ -66,8 +66,16 @@ def create_predictive_model_and_create_statistics(loaded_data_sets: List[DataSet
 
         # ovde trebam da pitam da li je regresija ili klasifikacija!
 
-        list_of_predictors: List[Predictor] = predictor_factory.get_fitted_regression_predictors(
-            dimension_reductioned_preprocessed_data_frame)
+        if predictor_column_type == "continual_value":
+            print("\n##Fitting regression predictors for data set reduced with " + train_dimension_reduction_results[i].reduction_name)
+            list_of_predictors: List[Predictor] = predictor_factory.get_fitted_regression_predictors(
+                dimension_reductioned_preprocessed_data_frame)
+        elif predictor_column_type == "categorical_value":
+            print("\n##Fitting classification predictors for data set reduced with " + train_dimension_reduction_results[i].reduction_name)
+            list_of_predictors: List[Predictor] = predictor_factory.get_fitted_classification_predictors(
+                dimension_reductioned_preprocessed_data_frame)
+        else:
+            ERROR_RETURN_VALUE
 
         for predictor_instance in list_of_predictors:
             prediction_score_object = PredictionScore(dimension_reductioned_preprocessed_data_frame,

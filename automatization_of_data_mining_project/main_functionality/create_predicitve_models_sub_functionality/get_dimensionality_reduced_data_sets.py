@@ -35,8 +35,8 @@ def get_dimensionality_reduced_data_sets(preprocessed_data_set: PreprocessedData
 
     # random forest parameters with different number of features
     rf_5_features = RandomForestParameters(5, 1, 10)
-    rf_15_features = RandomForestParameters(15, 1, 10)
-    rf_25_features = RandomForestParameters(25, 1, 10)
+    rf_15_features = RandomForestParameters(8, 1, 10)
+    rf_25_features = RandomForestParameters(10, 1, 10)
     random_forest_dimension_reduction = RandomForestDimensionReduction(parameters=[rf_5_features,
                                                                                    rf_15_features,
                                                                                    rf_25_features])
@@ -68,14 +68,14 @@ def get_dimensionality_reduced_data_sets(preprocessed_data_set: PreprocessedData
         statistic_reporter=statistic_reporter
     )
 
-    print("\n#Reduce train part of data set with all dimension reductions")
+    print("##Reduce train part of data set with all dimension reductions")
     train_dimension_reduction_results: List[
         DimensionReductionResult] = data_set_dimension_reductioner.get_reduced_data_sets(preprocessed_data_set.x_train,
                                                                                          preprocessed_data_set.y_train)
 
     data_set_dimension_reductioner.create_dimension_reduction_statistics(train_dimension_reduction_results)
 
-    print("\n#Reduce test part of data set with all dimension reductions\n")
+    print("##Reduce test part of data set with all dimension reductions")
     test_dimension_reduction_results: List[
         DimensionReductionResult] = data_set_dimension_reductioner.get_reduced_data_sets(preprocessed_data_set.x_test,
                                                                                          preprocessed_data_set.y_test)

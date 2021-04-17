@@ -15,6 +15,8 @@ class PCARegression(Predictor):
         self.model: LinearRegression
         self.predictor_name: str = "PCA Regression"
         self.predictor_type: PredictorTypeEnum = PredictorTypeEnum.REGRESSION
+        self.best_params = None
+        self.best_accuracy = None
 
     def fit(self, processed_data: PreprocessedDataSetInfo):
         number_of_columns = processed_data.x_train.shape[1]
@@ -31,7 +33,6 @@ class PCARegression(Predictor):
         # Define PLS object with optimal number of components
         regressor = PLSRegression(n_components=msemin + 1)
         regressor.fit(processed_data.x_train, processed_data.y_train)
-
         self.model = regressor
 
     def predict(self, data):

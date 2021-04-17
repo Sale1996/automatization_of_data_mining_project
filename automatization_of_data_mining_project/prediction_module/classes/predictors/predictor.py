@@ -7,6 +7,7 @@ class Predictor(object):
         self.model = None
         self.predictor_name: str = None
         self.predictor_type: PredictorTypeEnum = None
+        self.best_params = None
 
     def fit(self, processed_data: PreprocessedDataSetInfo):
         pass

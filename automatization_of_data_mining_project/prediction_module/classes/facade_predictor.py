@@ -23,6 +23,7 @@ class FacadePredictor(object):
         fitted_predictors = []
         for predictor in self.predictors:
             if predictor.predictor_type == predictor_type:
+                print("###Fit predictor " + predictor.predictor_name)
                 predictor.fit(input_data)
                 fitted_predictors.append(copy.deepcopy(predictor))
         return fitted_predictors

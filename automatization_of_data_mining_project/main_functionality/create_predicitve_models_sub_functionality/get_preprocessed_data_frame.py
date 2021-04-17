@@ -46,7 +46,7 @@ def get_preprocessed_data_frame(data_frame: pandas.DataFrame):
                                                          '|--------------------------------------------------------|\n'
                                                          ' Which type is chosen prediction column:                  \n'
                                                          '                                                          \n'
-                                                         ' 1) Continual value                                       \n'
+                                                         ' 1) Numerical value                                       \n'
                                                          ' 2) Categorical value                                     \n'
                                                          '                                                          \n'
                                                          ' Choose:')
@@ -54,7 +54,7 @@ def get_preprocessed_data_frame(data_frame: pandas.DataFrame):
         user_type_choice = raw_input(preprocessed_step_prediction_column_type_menu)
 
         if user_type_choice == "1":
-            predictor_column_type = "continual_value"
+            predictor_column_type = "numerical_value"
             break
         elif user_type_choice == "2":
             predictor_column_type = "categorical_value"

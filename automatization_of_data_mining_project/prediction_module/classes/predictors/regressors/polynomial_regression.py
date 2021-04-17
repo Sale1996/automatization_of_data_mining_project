@@ -13,6 +13,8 @@ class PolynomialRegression(Predictor):
         self.predictor_name: str = "Polynomial Regression"
         self.predictor_type: PredictorTypeEnum = PredictorTypeEnum.REGRESSION
         self.polynomial_features = PolynomialFeatures(degree=4)
+        self.best_params = None
+        self.best_accuracy = None
 
     def fit(self, processed_data: PreprocessedDataSetInfo):
         x_poly = self.polynomial_features.fit_transform(processed_data.x_train)

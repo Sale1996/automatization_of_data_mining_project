@@ -43,7 +43,7 @@ class Container(containers.DeclarativeContainer):
                                                       multiple_linear_regression(),
                                                       # polynomial_regression(), excluded due to work with huge dimensionality data set
                                                       random_forest_regression(),
-                                                      support_vector_regression(),
+                                                      # support_vector_regression(),
                                                       elastic_net_regression(),
                                                       xgb_regression(),
                                                       pca_regression(),

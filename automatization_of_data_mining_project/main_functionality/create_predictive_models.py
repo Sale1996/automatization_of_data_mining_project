@@ -6,6 +6,7 @@ from typing import List
 import pandas
 from termcolor import colored
 
+from data_set_dimension_reductioner.classes.data_class.dimension_reduction_result import DimensionReductionResult
 from data_set_info_data_class.data_class.data_set_info import DataSetInfo
 from data_set_info_data_class.data_class.preprocessed_data_set_info import PreprocessedDataSetInfo
 from main_functionality.create_predicitve_models_sub_functionality.get_data_sets_with_filled_nan_values import \
@@ -54,6 +55,18 @@ def create_predictive_model_and_create_statistics(loaded_data_sets: List[DataSet
 
     reduced_data_set_with_prediction_model: List[PredictionScore] = []
 
+    # append not reduced data set too
+    not_reduced_train_data_set = DimensionReductionResult("Original data set",
+                                                          preprocessed_joined_data_frame.x_train.values,
+                                                          1, 1)
+
+    not_reduced_test_data_set = DimensionReductionResult("Original data set",
+                                                         preprocessed_joined_data_frame.x_test.values,
+                                                         1, 1)
+
+    train_dimension_reduction_results.append(not_reduced_train_data_set)
+    test_dimension_reduction_results.append(not_reduced_test_data_set)
+
     # iterate thought every dimension reductioned data set
     for i in range(0, len(train_dimension_reduction_results)):
         predictor_factory = PredictorFactory()
@@ -66,12 +79,14 @@ def create_predictive_model_and_create_statistics(loaded_data_sets: List[DataSet
 
         # ovde trebam da pitam da li je regresija ili klasifikacija!
 
-        if predictor_column_type == "continual_value":
-            print("\n##Fitting regression predictors for data set reduced with " + train_dimension_reduction_results[i].reduction_name)
+        if predictor_column_type == "numerical_value":
+            print("##Fitting regression predictors for data set reduced with " + train_dimension_reduction_results[
+                i].reduction_name)
             list_of_predictors: List[Predictor] = predictor_factory.get_fitted_regression_predictors(
                 dimension_reductioned_preprocessed_data_frame)
         elif predictor_column_type == "categorical_value":
-            print("\n##Fitting classification predictors for data set reduced with " + train_dimension_reduction_results[i].reduction_name)
+            print("##Fitting classification predictors for data set reduced with " + train_dimension_reduction_results[
+                i].reduction_name)
             list_of_predictors: List[Predictor] = predictor_factory.get_fitted_classification_predictors(
                 dimension_reductioned_preprocessed_data_frame)
         else:
@@ -103,7 +118,6 @@ def create_predictive_model_and_create_statistics(loaded_data_sets: List[DataSet
 
         prediction_score_object.error_scores = error_scores
 
-
     # generate document with all results
     error_information_for_document = []
 
@@ -115,7 +129,14 @@ def create_predictive_model_and_create_statistics(loaded_data_sets: List[DataSet
         values_row.append(prediction_score_object.dimension_reduction_name)
 
         names_row.append("Prediction model + parameters")
-        values_row.append(prediction_score_object.predictor.predictor_name)
+        predictor_value = prediction_score_object.predictor.predictor_name
+        predictor_value += " | Parameters: "
+        if prediction_score_object.predictor.best_params is None:
+            predictor_value += "default"
+        else:
+            for param_name in prediction_score_object.predictor.best_params:
+                predictor_value += param_name + '=' + prediction_score_object.predictor.best_params[param_name] + ';'
+        values_row.append(predictor_value)
 
         for error_object in prediction_score_object.error_scores:
             names_row.append(error_object.error_calculator_name)

@@ -11,6 +11,8 @@ class MultipleLinearRegression(Predictor):
         self.model: LinearRegression
         self.predictor_name: str = "Multiple Linear Regression"
         self.predictor_type: PredictorTypeEnum = PredictorTypeEnum.REGRESSION
+        self.best_params = None
+        self.best_accuracy = None
 
     def fit(self, processed_data: PreprocessedDataSetInfo):
         regressor = LinearRegression()

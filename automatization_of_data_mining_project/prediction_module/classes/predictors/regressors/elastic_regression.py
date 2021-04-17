@@ -1,4 +1,4 @@
-from sklearn.linear_model import LinearRegression, ElasticNet
+from sklearn.linear_model import ElasticNet
 from sklearn.model_selection import GridSearchCV
 
 from data_set_info_data_class.data_class.preprocessed_data_set_info import PreprocessedDataSetInfo
@@ -16,7 +16,7 @@ class ElasticRegression(Predictor):
         self.best_accuracy = None
 
     def fit(self, processed_data: PreprocessedDataSetInfo):
-        parameters = [{'alpha': [0.001, 0.01, 0.1, 0.8]}]
+        parameters = [{'alpha': [0.001, 0.01, 0.1, 0.8], 'max_iter': [10000]}]
         grid_search = GridSearchCV(estimator=ElasticNet(),
                                    param_grid=parameters,
                                    scoring='r2',

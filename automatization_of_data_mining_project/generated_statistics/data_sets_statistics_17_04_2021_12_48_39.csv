@@ -1,0 +1,69 @@
+Agricultural methane emission
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,Agricultural methane emissions (% of total) - Total number of data,Agricultural methane emissions (% of total) - Total number of missing data,Agricultural methane emissions (% of total) - Total percent of missing data
+"Country Code, Year, Agricultural methane emissions (% of total)",1970-2008,217,1989,11,126.67,8463,794,9.38
+CO emissions per capita
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,Per capita COa emissions (tonnes per capita) - Total number of data,Per capita COa emissions (tonnes per capita) - Total number of missing data,Per capita COa emissions (tonnes per capita) - Total percent of missing data
+"Country Code, Year, Per capita COa emissions (tonnes per capita)",1751-2017,196,1909,63,3960.33,42844,26408,61.64
+Coruption perception index
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,corruption_index - Total number of data,corruption_index - Total number of missing data,corruption_index - Total percent of missing data
+"Country Code, Year, corruption_index",2000-2017,161,2008,5,26.92,2898,352,12.15
+Daily per capita supply of calories
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,Daily caloric supply (kcal/person/day) - Total number of data,Daily caloric supply (kcal/person/day) - Total number of missing data,Daily caloric supply (kcal/person/day) - Total percent of missing data
+"Country Code, Year, Daily caloric supply (kcal/person/day)",1270-2013,178,1985,26,658.16,9551,0,0.0
+Death rate
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,"Death rate, crude (per 1,000 people) - Total number of data","Death rate, crude (per 1,000 people) - Total number of missing data","Death rate, crude (per 1,000 people) - Total percent of missing data"
+"Country Code, Year, Death rate, crude (per 1,000 people)",1960-2017,264,1988,17,280.25,15312,1075,7.02
+Electricity
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,Access to electricity (% of population) - Total number of data,Access to electricity (% of population) - Total number of missing data,Access to electricity (% of population) - Total percent of missing data
+"Country Code, Year, Access to electricity (% of population)",1990-2017,217,2004,8,65.25,6076,1139,18.75
+Employers percentage
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,"Employers, total (% of total employment) (modeled ILO estimate) - Total number of data","Employers, total (% of total employment) (modeled ILO estimate) - Total number of missing data","Employers, total (% of total employment) (modeled ILO estimate) - Total percent of missing data"
+"Country Code, Year, Employers, total (% of total employment) (modeled ILO estimate)",2009-2018,187,2014,3,8.25,1870,0,0.0
+Fertility rate births per women
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,"Fertility rate, total (births per woman) - Total number of data","Fertility rate, total (births per woman) - Total number of missing data","Fertility rate, total (births per woman) - Total percent of missing data"
+"Country Code, Year, Fertility rate, total (births per woman)",1960-2017,264,1988,17,280.25,15312,1296,8.46
+Freedom of the Press data
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,Total Score - Total number of data,Total Score - Total number of missing data,Total Score - Total percent of missing data
+"Country Code, Year, Total Score",1994-2017,176,2006,7,47.92,4224,125,2.96
+Global media freedom
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,Mediascore - Total number of data,Mediascore - Total number of missing data,Mediascore - Total percent of missing data
+"Year, Country Code, Mediascore",1948-2014,179,1986,18,326.8,9039,0,0.0
+Human rights scores
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,Human Rights Protection Scores - Total number of data,Human Rights Protection Scores - Total number of missing data,Human Rights Protection Scores - Total percent of missing data
+"Country Code, Year, Human Rights Protection Scores",1946-2017,201,1985,20,417.76,11717,0,0.0
+Inflation
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,inflation - Total number of data,inflation - Total number of missing data,inflation - Total percent of missing data
+"Country Code, Year, inflation",1960-2018,217,1989,17,287.44,12803,5107,39.89
+Internet users
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,internet_usage - Total number of data,internet_usage - Total number of missing data,internet_usage - Total percent of missing data
+"Country Code, Year, internet_usage",1960-2019,255,1990,17,299.92,15300,9565,62.52
+Military expenditure
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,Military expenditure (% of GDP) - Total number of data,Military expenditure (% of GDP) - Total number of missing data,Military expenditure (% of GDP) - Total percent of missing data
+"Country Code, Year, Military expenditure (% of GDP)",1960-2018,217,1989,17,290.0,12803,5766,45.04
+Population density
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,Population density (people per sq. km of land area) - Total number of data,Population density (people per sq. km of land area) - Total number of missing data,Population density (people per sq. km of land area) - Total percent of missing data
+"Country Code, Year, Population density (people per sq. km of land area)",1961-2018,217,1990,17,280.25,12586,424,3.37
+PTS
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,PTS - Total number of data,PTS - Total number of missing data,PTS - Total percent of missing data
+"Country Code, Year, PTS",1976-2018,180,1997,12,153.88,7736,1206,15.59
+Shares of suicides
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,Deaths - Self-harm - Sex: Both - Age: All Ages (Percent) (%) - Total number of data,Deaths - Self-harm - Sex: Both - Age: All Ages (Percent) (%) - Total number of missing data,Deaths - Self-harm - Sex: Both - Age: All Ages (Percent) (%) - Total percent of missing data
+"Country Code, Year, Deaths - Self-harm - Sex: Both - Age: All Ages (Percent) (%)",1990-2017,209,2004,8,65.25,6468,0,0.0
+Alcohol or drug use disorders
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,Prevalence - Alcohol and substance use disorders: Both (age-standardized percent) (%) - Total number of data,Prevalence - Alcohol and substance use disorders: Both (age-standardized percent) (%) - Total number of missing data,Prevalence - Alcohol and substance use disorders: Both (age-standardized percent) (%) - Total percent of missing data
+"Country Code, Year, Prevalence - Alcohol and substance use disorders: Both (age-standardized percent) (%)",1990-2016,196,2003,8,60.67,6156,0,0.0
+Eating disorder
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,Prevalence - Eating disorders - Sex: Both - Age: Age-standardized (Percent) (%) - Total number of data,Prevalence - Eating disorders - Sex: Both - Age: Age-standardized (Percent) (%) - Total number of missing data,Prevalence - Eating disorders - Sex: Both - Age: Age-standardized (Percent) (%) - Total percent of missing data
+"Country Code, Year, Prevalence - Eating disorders - Sex: Both - Age: Age-standardized (Percent) (%)",1990-2017,196,2004,8,65.25,6468,0,0.0
+Depression
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,Prevalence - Depressive disorders - Sex: Both - Age: Age-standardized (Percent) (%) - Total number of data,Prevalence - Depressive disorders - Sex: Both - Age: Age-standardized (Percent) (%) - Total number of missing data,Prevalence - Depressive disorders - Sex: Both - Age: Age-standardized (Percent) (%) - Total percent of missing data
+"Country Code, Year, Prevalence - Depressive disorders - Sex: Both - Age: Age-standardized (Percent) (%)",1990-2017,196,2004,8,65.25,6468,0,0.0
+Mental and substance disorders
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,Prevalence - Mental and substance use disorders - Sex: Both - Age: Age-standardized (Percent) (%) - Total number of data,Prevalence - Mental and substance use disorders - Sex: Both - Age: Age-standardized (Percent) (%) - Total number of missing data,Prevalence - Mental and substance use disorders - Sex: Both - Age: Age-standardized (Percent) (%) - Total percent of missing data
+"Country Code, Year, Prevalence - Mental and substance use disorders - Sex: Both - Age: Age-standardized (Percent) (%)",1990-2017,196,2004,8,65.25,6468,0,0.0
+Unemployment
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,"Unemployment, total (% of total labor force) (national estimate) - Total number of data","Unemployment, total (% of total labor force) (national estimate) - Total number of missing data","Unemployment, total (% of total labor force) (national estimate) - Total percent of missing data"
+"Country Code, Year, Unemployment, total (% of total labor force) (national estimate)",1960-2019,217,1990,17,299.92,13020,9296,71.4
+Urban population growth
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,urban_population_growth_percent - Total number of data,urban_population_growth_percent - Total number of missing data,urban_population_growth_percent - Total percent of missing data
+"Country Code, Year, urban_population_growth_percent",1960-2018,217,1989,17,290.0,12803,230,1.8

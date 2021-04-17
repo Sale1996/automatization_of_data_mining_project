@@ -1,39 +1,39 @@
 Low variance filter| Parameters: Variance threshold = 20
 Number of columns before,Number of columns after
-163,3
+154,9
 Low variance filter| Parameters: Variance threshold = 40
 Number of columns before,Number of columns after
-163,3
+154,8
 Low variance filter| Parameters: Variance threshold = 60
 Number of columns before,Number of columns after
-163,3
+154,8
 Low variance filter| Parameters: Variance threshold = 80
 Number of columns before,Number of columns after
-163,2
+154,7
 Random Forest reduction| Parameters: Number of features = 5; Random state = 1; Max depth = 10
 Number of columns before,Number of columns after
-163,5
-Random Forest reduction| Parameters: Number of features = 15; Random state = 1; Max depth = 10
+154,5
+Random Forest reduction| Parameters: Number of features = 8; Random state = 1; Max depth = 10
 Number of columns before,Number of columns after
-163,15
-Random Forest reduction| Parameters: Number of features = 25; Random state = 1; Max depth = 10
+154,8
+Random Forest reduction| Parameters: Number of features = 10; Random state = 1; Max depth = 10
 Number of columns before,Number of columns after
-163,25
-PCA| Parameters: Number of components = 41
+154,10
+PCA| Parameters: Number of components = 38
 Number of columns before,Number of columns after
-163,41
-PCA| Parameters: Number of components = 82
+154,38
+PCA| Parameters: Number of components = 77
 Number of columns before,Number of columns after
-163,82
-PCA| Parameters: Number of components = 122
+154,77
+PCA| Parameters: Number of components = 116
 Number of columns before,Number of columns after
-163,122
-Factor Analysis| Parameters: Number of components = 41
+154,116
+Factor Analysis| Parameters: Number of components = 38
 Number of columns before,Number of columns after
-163,41
-Factor Analysis| Parameters: Number of components = 82
+154,38
+Factor Analysis| Parameters: Number of components = 77
 Number of columns before,Number of columns after
-163,82
-Factor Analysis| Parameters: Number of components = 122
+154,77
+Factor Analysis| Parameters: Number of components = 116
 Number of columns before,Number of columns after
-163,122
+154,116

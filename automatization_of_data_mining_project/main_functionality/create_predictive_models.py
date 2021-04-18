@@ -9,6 +9,15 @@ from termcolor import colored
 from data_set_dimension_reductioner.classes.data_class.dimension_reduction_result import DimensionReductionResult
 from data_set_info_data_class.data_class.data_set_info import DataSetInfo
 from data_set_info_data_class.data_class.preprocessed_data_set_info import PreprocessedDataSetInfo
+from feature_importance_statistic_generator import FeatureImportanceGenerator
+from feature_importance_statistic_generator.classes.feature_importance_plot_generator.linear_regression_feature_coefficient_plots import \
+    LinearRegressionFeatureCoefficientPlots
+from feature_importance_statistic_generator.classes.feature_importance_plot_generator.pca_loading_scores import \
+    PCALoadingScores
+from feature_importance_statistic_generator.classes.feature_importance_plot_generator.random_forest_regressor_feature_importance_generator import \
+    RandomForestRegressorFeatureImportanceGenerator
+from feature_importance_statistic_generator.classes.feature_importance_plot_generator.xgb_regressor_feature_importance import \
+    XGBRegressorFeatureImportance
 from main_functionality.create_predicitve_models_sub_functionality.get_data_sets_with_filled_nan_values import \
     get_data_sets_with_filled_nan_values
 from main_functionality.create_predicitve_models_sub_functionality.get_dimensionality_reduced_data_sets import \
@@ -135,7 +144,7 @@ def create_predictive_model_and_create_statistics(loaded_data_sets: List[DataSet
             predictor_value += "default"
         else:
             for param_name in prediction_score_object.predictor.best_params:
-                predictor_value += param_name + '=' + prediction_score_object.predictor.best_params[param_name] + ';'
+                predictor_value += param_name + '=' + str(prediction_score_object.predictor.best_params[param_name]) + ';'
         values_row.append(predictor_value)
 
         for error_object in prediction_score_object.error_scores:
@@ -155,6 +164,18 @@ def create_predictive_model_and_create_statistics(loaded_data_sets: List[DataSet
         writer = csv.writer(f)
         writer.writerows(error_information_for_document)
 
-    print("debug")
+    print("Gotovo")
+
+    linear_regression_feature_coefficient = LinearRegressionFeatureCoefficientPlots()
+    pca_loading_scores = PCALoadingScores()
+    random_forest_regressor_feature_importance = RandomForestRegressorFeatureImportanceGenerator()
+    xgb_regressor_feature_importance = XGBRegressorFeatureImportance()
+
+    feature_importance_generator = FeatureImportanceGenerator(plot_generators=[linear_regression_feature_coefficient,
+                                                                               pca_loading_scores,
+                                                                               random_forest_regressor_feature_importance,
+                                                                               xgb_regressor_feature_importance])
+
+    feature_importance_generator.generate_feature_importance_statistics(preprocessed_joined_data_frame, path)
 
     return ERROR_RETURN_VALUE

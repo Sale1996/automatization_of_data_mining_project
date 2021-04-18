@@ -1,0 +1,5 @@
+from feature_importance_statistic_generator.classes.feature_importance_statistic_generator import \
+    FeatureImportanceStatisticGenerator
+from feature_importance_statistic_generator.depedency_injector.container import Container
+
+FeatureImportanceGenerator: FeatureImportanceStatisticGenerator = Container.feature_importance_statistic_generator

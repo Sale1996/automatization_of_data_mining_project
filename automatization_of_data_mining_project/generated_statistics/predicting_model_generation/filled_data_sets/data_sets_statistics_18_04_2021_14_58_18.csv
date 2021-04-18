@@ -1,0 +1,6 @@
+dwa
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,corruption_index - Total number of data,corruption_index - Total number of missing data,corruption_index - Total percent of missing data
+"Country Code, Year, corruption_index",1990-2017,146,2004,8,65.25,4088,1734,42.42
+2
+Columns,Year - Range,Country Code - Unique impressions,Year - Mean value,Year - Standard deviation,Year - Variance,Daily caloric supply (kcal/person/day) - Total number of data,Daily caloric supply (kcal/person/day) - Total number of missing data,Daily caloric supply (kcal/person/day) - Total percent of missing data
+"Country Code, Year, Daily caloric supply (kcal/person/day)",1990-2017,146,2004,8,65.25,4088,660,16.14

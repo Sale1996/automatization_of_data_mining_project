@@ -1,0 +1,39 @@
+Low variance filter| Parameters: Variance threshold = 20
+Number of columns before,Number of columns after
+147,3
+Low variance filter| Parameters: Variance threshold = 40
+Number of columns before,Number of columns after
+147,2
+Low variance filter| Parameters: Variance threshold = 60
+Number of columns before,Number of columns after
+147,2
+Low variance filter| Parameters: Variance threshold = 80
+Number of columns before,Number of columns after
+147,1
+Random Forest reduction| Parameters: Number of features = 5; Random state = 1; Max depth = 10
+Number of columns before,Number of columns after
+147,5
+Random Forest reduction| Parameters: Number of features = 8; Random state = 1; Max depth = 10
+Number of columns before,Number of columns after
+147,8
+Random Forest reduction| Parameters: Number of features = 10; Random state = 1; Max depth = 10
+Number of columns before,Number of columns after
+147,10
+PCA| Parameters: Number of components = 37
+Number of columns before,Number of columns after
+147,37
+PCA| Parameters: Number of components = 74
+Number of columns before,Number of columns after
+147,74
+PCA| Parameters: Number of components = 110
+Number of columns before,Number of columns after
+147,110
+Factor Analysis| Parameters: Number of components = 37
+Number of columns before,Number of columns after
+147,37
+Factor Analysis| Parameters: Number of components = 74
+Number of columns before,Number of columns after
+147,74
+Factor Analysis| Parameters: Number of components = 110
+Number of columns before,Number of columns after
+147,110

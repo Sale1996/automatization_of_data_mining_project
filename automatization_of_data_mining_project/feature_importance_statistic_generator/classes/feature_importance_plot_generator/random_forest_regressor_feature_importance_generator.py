@@ -12,8 +12,8 @@ class RandomForestRegressorFeatureImportanceGenerator(FeatureImportancePlotGener
         self.generator_name = 'random_forest_regressor_feature_importance'
 
     def generate_plot(self, preprocessed_data_set: PreprocessedDataSetInfo):
-        model = RandomForestRegressor(random_state=5, n_estimators=20)
-        model.fit(preprocessed_data_set.x_train, preprocessed_data_set.y_train.ravel())
+        model = RandomForestRegressor(random_state=0, n_estimators=128)
+        model.fit(preprocessed_data_set.x_train, preprocessed_data_set.y_train.values.ravel())
         features = preprocessed_data_set.x_train.columns
         importances = model.feature_importances_
         indices = numpy.argsort(importances)

@@ -1,0 +1,252 @@
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 20,Decision Tree Regression | Parameters: random_state=1;,0.08,0.879
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 20,Multiple Linear Regression | Parameters: default,0.514,0.222
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 20,Random Forest Regression | Parameters: n_estimators=64;random_state=2;,0.043,0.934
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 20,Elastic Regression | Parameters: alpha=0.1;max_iter=10000;,0.514,0.221
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 20,XG Boost Regression | Parameters: alpha=10;colsample_bytree=0.8;learning_rate=0.1;max_depth=5;n_estimators=10;objective=reg:squarederror;,0.463,0.3
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 20,PCA Regression | Parameters: default,0.514,0.222
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 40,Decision Tree Regression | Parameters: random_state=5;,0.137,0.792
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 40,Multiple Linear Regression | Parameters: default,0.522,0.21
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 40,Random Forest Regression | Parameters: n_estimators=64;random_state=5;,0.064,0.903
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 40,Elastic Regression | Parameters: alpha=0.01;max_iter=10000;,0.522,0.21
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 40,XG Boost Regression | Parameters: alpha=10;colsample_bytree=0.8;learning_rate=0.1;max_depth=5;n_estimators=10;objective=reg:squarederror;,0.502,0.241
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 40,PCA Regression | Parameters: default,0.521,0.212
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 60,Decision Tree Regression | Parameters: random_state=5;,0.137,0.792
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 60,Multiple Linear Regression | Parameters: default,0.522,0.21
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 60,Random Forest Regression | Parameters: n_estimators=64;random_state=5;,0.064,0.903
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 60,Elastic Regression | Parameters: alpha=0.01;max_iter=10000;,0.522,0.21
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 60,XG Boost Regression | Parameters: alpha=10;colsample_bytree=0.8;learning_rate=0.1;max_depth=5;n_estimators=10;objective=reg:squarederror;,0.502,0.241
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 60,PCA Regression | Parameters: default,0.521,0.212
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 80,Decision Tree Regression | Parameters: random_state=1;,0.155,0.766
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 80,Multiple Linear Regression | Parameters: default,0.524,0.207
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 80,Random Forest Regression | Parameters: n_estimators=64;random_state=5;,0.064,0.903
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 80,Elastic Regression | Parameters: alpha=0.1;max_iter=10000;,0.523,0.208
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 80,XG Boost Regression | Parameters: alpha=10;colsample_bytree=0.8;learning_rate=0.1;max_depth=5;n_estimators=10;objective=reg:squarederror;,0.498,0.246
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Low variance filter| Parameters: Variance threshold = 80,PCA Regression | Parameters: default,0.524,0.207
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Random Forest reduction| Parameters: Number of features = 5; Random state = 1; Max depth = 10,Decision Tree Regression | Parameters: random_state=5;,6.344,-8.6
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Random Forest reduction| Parameters: Number of features = 5; Random state = 1; Max depth = 10,Multiple Linear Regression | Parameters: default,144.47,-217.622
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Random Forest reduction| Parameters: Number of features = 5; Random state = 1; Max depth = 10,Random Forest Regression | Parameters: n_estimators=64;random_state=2;,3.511,-4.313
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Random Forest reduction| Parameters: Number of features = 5; Random state = 1; Max depth = 10,Elastic Regression | Parameters: alpha=0.001;max_iter=10000;,120.63,-181.547
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Random Forest reduction| Parameters: Number of features = 5; Random state = 1; Max depth = 10,XG Boost Regression | Parameters: alpha=10;colsample_bytree=0.8;learning_rate=0.1;max_depth=5;n_estimators=10;objective=reg:squarederror;,0.531,0.196
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Random Forest reduction| Parameters: Number of features = 5; Random state = 1; Max depth = 10,PCA Regression | Parameters: default,149.218,-224.808
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Random Forest reduction| Parameters: Number of features = 8; Random state = 1; Max depth = 10,Decision Tree Regression | Parameters: random_state=10;,6.869,-9.395
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Random Forest reduction| Parameters: Number of features = 8; Random state = 1; Max depth = 10,Multiple Linear Regression | Parameters: default,4.769236190875456e+22,-7.217155264096292e+22
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Random Forest reduction| Parameters: Number of features = 8; Random state = 1; Max depth = 10,Random Forest Regression | Parameters: n_estimators=64;random_state=2;,4.356,-5.591
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Random Forest reduction| Parameters: Number of features = 8; Random state = 1; Max depth = 10,Elastic Regression | Parameters: alpha=0.001;max_iter=10000;,4.3228309294765065e+22,-6.541622337379506e+22
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Random Forest reduction| Parameters: Number of features = 8; Random state = 1; Max depth = 10,XG Boost Regression | Parameters: alpha=10;colsample_bytree=0.8;learning_rate=0.1;max_depth=5;n_estimators=10;objective=reg:squarederror;,0.534,0.192
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Random Forest reduction| Parameters: Number of features = 8; Random state = 1; Max depth = 10,PCA Regression | Parameters: default,4.747673684500146e+22,-7.184525310333169e+22
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Random Forest reduction| Parameters: Number of features = 10; Random state = 1; Max depth = 10,Decision Tree Regression | Parameters: random_state=1;,6.045,-8.148
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Random Forest reduction| Parameters: Number of features = 10; Random state = 1; Max depth = 10,Multiple Linear Regression | Parameters: default,4.114952136225883e+22,-6.22704501997319e+22
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Random Forest reduction| Parameters: Number of features = 10; Random state = 1; Max depth = 10,Random Forest Regression | Parameters: n_estimators=64;random_state=2;,3.691,-4.586
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Random Forest reduction| Parameters: Number of features = 10; Random state = 1; Max depth = 10,Elastic Regression | Parameters: alpha=0.001;max_iter=10000;,3.23137124752403e+22,-4.889946120499542e+22
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Random Forest reduction| Parameters: Number of features = 10; Random state = 1; Max depth = 10,XG Boost Regression | Parameters: alpha=10;colsample_bytree=0.8;learning_rate=0.1;max_depth=5;n_estimators=10;objective=reg:squarederror;,0.49,0.259
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Random Forest reduction| Parameters: Number of features = 10; Random state = 1; Max depth = 10,PCA Regression | Parameters: default,4.106912720871793e+22,-6.214879191626496e+22
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+PCA| Parameters: Number of components = 38,Decision Tree Regression | Parameters: random_state=0;,1.377,-1.084
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+PCA| Parameters: Number of components = 38,Multiple Linear Regression | Parameters: default,0.744,-0.126
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+PCA| Parameters: Number of components = 38,Random Forest Regression | Parameters: n_estimators=64;random_state=2;,0.714,-0.08
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+PCA| Parameters: Number of components = 38,Elastic Regression | Parameters: alpha=0.001;max_iter=10000;,0.726,-0.099
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+PCA| Parameters: Number of components = 38,XG Boost Regression | Parameters: alpha=10;colsample_bytree=0.8;learning_rate=0.1;max_depth=5;n_estimators=10;objective=reg:squarederror;,0.635,0.039
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+PCA| Parameters: Number of components = 38,PCA Regression | Parameters: default,0.744,-0.126
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+PCA| Parameters: Number of components = 77,Decision Tree Regression | Parameters: random_state=0;,1.356,-1.051
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+PCA| Parameters: Number of components = 77,Multiple Linear Regression | Parameters: default,0.851,-0.288
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+PCA| Parameters: Number of components = 77,Random Forest Regression | Parameters: n_estimators=64;random_state=2;,0.787,-0.191
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+PCA| Parameters: Number of components = 77,Elastic Regression | Parameters: alpha=0.001;max_iter=10000;,0.802,-0.214
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+PCA| Parameters: Number of components = 77,XG Boost Regression | Parameters: alpha=10;colsample_bytree=0.8;learning_rate=0.1;max_depth=5;n_estimators=10;objective=reg:squarederror;,0.689,-0.043
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+PCA| Parameters: Number of components = 77,PCA Regression | Parameters: default,20122.112,-30449.244
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+PCA| Parameters: Number of components = 116,Decision Tree Regression | Parameters: random_state=5;,1.969,-1.979
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+PCA| Parameters: Number of components = 116,Multiple Linear Regression | Parameters: default,0.992,-0.502
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+PCA| Parameters: Number of components = 116,Random Forest Regression | Parameters: n_estimators=64;random_state=2;,1.229,-0.861
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+PCA| Parameters: Number of components = 116,Elastic Regression | Parameters: alpha=0.001;max_iter=10000;,0.907,-0.372
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+PCA| Parameters: Number of components = 116,XG Boost Regression | Parameters: alpha=10;colsample_bytree=0.8;learning_rate=0.1;max_depth=5;n_estimators=10;objective=reg:squarederror;,0.711,-0.076
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+PCA| Parameters: Number of components = 116,PCA Regression | Parameters: default,0.992,-0.501
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Factor Analysis| Parameters: Number of components = 38,Decision Tree Regression | Parameters: random_state=10;,2.061,-2.118
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Factor Analysis| Parameters: Number of components = 38,Multiple Linear Regression | Parameters: default,1.151,-0.741
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Factor Analysis| Parameters: Number of components = 38,Random Forest Regression | Parameters: n_estimators=64;random_state=5;,0.742,-0.122
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Factor Analysis| Parameters: Number of components = 38,Elastic Regression | Parameters: alpha=0.001;max_iter=10000;,1.128,-0.708
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Factor Analysis| Parameters: Number of components = 38,XG Boost Regression | Parameters: alpha=10;colsample_bytree=0.8;learning_rate=0.1;max_depth=5;n_estimators=10;objective=reg:squarederror;,0.754,-0.14
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Factor Analysis| Parameters: Number of components = 38,PCA Regression | Parameters: default,1.15,-0.74
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Factor Analysis| Parameters: Number of components = 77,Decision Tree Regression | Parameters: random_state=1;,4.418,-5.686
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Factor Analysis| Parameters: Number of components = 77,Multiple Linear Regression | Parameters: default,145.371,-218.987
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Factor Analysis| Parameters: Number of components = 77,Random Forest Regression | Parameters: n_estimators=64;random_state=0;,2.613,-2.954
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Factor Analysis| Parameters: Number of components = 77,Elastic Regression | Parameters: alpha=0.001;max_iter=10000;,72.609,-108.878
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Factor Analysis| Parameters: Number of components = 77,XG Boost Regression | Parameters: alpha=10;colsample_bytree=0.8;learning_rate=0.1;max_depth=5;n_estimators=10;objective=reg:squarederror;,0.832,-0.259
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Factor Analysis| Parameters: Number of components = 77,PCA Regression | Parameters: default,145.371,-218.987
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Factor Analysis| Parameters: Number of components = 116,Decision Tree Regression | Parameters: random_state=0;,1.061,-0.606
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Factor Analysis| Parameters: Number of components = 116,Multiple Linear Regression | Parameters: default,0.843,-0.275
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Factor Analysis| Parameters: Number of components = 116,Random Forest Regression | Parameters: n_estimators=64;random_state=0;,0.726,-0.099
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Factor Analysis| Parameters: Number of components = 116,Elastic Regression | Parameters: alpha=0.001;max_iter=10000;,0.837,-0.266
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Factor Analysis| Parameters: Number of components = 116,XG Boost Regression | Parameters: alpha=10;colsample_bytree=0.8;learning_rate=0.1;max_depth=5;n_estimators=10;objective=reg:squarederror;,0.754,-0.142
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Factor Analysis| Parameters: Number of components = 116,PCA Regression | Parameters: default,0.842,-0.275
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Original data set,Decision Tree Regression | Parameters: random_state=0;,0.031,0.953
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Original data set,Multiple Linear Regression | Parameters: default,0.033,0.95
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Original data set,Random Forest Regression | Parameters: n_estimators=64;random_state=0;,0.009,0.987
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Original data set,Elastic Regression | Parameters: alpha=0.001;max_iter=10000;,0.049,0.926
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Original data set,XG Boost Regression | Parameters: alpha=10;colsample_bytree=0.8;learning_rate=0.1;max_depth=5;n_estimators=10;objective=reg:squarederror;,0.354,0.464
+""
+Dimension reduction + parameters,Prediction model + parameters,MSE,R2
+Original data set,PCA Regression | Parameters: default,0.033,0.95
+""

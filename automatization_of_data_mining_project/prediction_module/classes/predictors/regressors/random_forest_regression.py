@@ -15,7 +15,7 @@ class RandomForestRegression(Predictor):
         self.best_accuracy = None
 
     def fit(self, processed_data: PreprocessedDataSetInfo):
-        parameters = [{'n_estimators': [10, 15, 20, 5], 'random_state': [0, 1, 2, 5]}]
+        parameters = [{'n_estimators': [20, 5, 64, 128], 'random_state': [0, 1, 2, 5]}]
         grid_search = GridSearchCV(estimator=RandomForestRegressor(),
                                    param_grid=parameters,
                                    scoring='r2',
